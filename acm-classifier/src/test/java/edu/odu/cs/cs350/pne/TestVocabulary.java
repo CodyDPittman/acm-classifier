@@ -8,7 +8,12 @@ import static org.hamcrest.Matchers.*;
 
 public class TestVocabulary{
 	
+@Test
+public void testVocab() {
+	Vocabulary vocab = new Vocabulary();
 	
+}
+
 	
 	
 }
