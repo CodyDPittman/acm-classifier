@@ -1,1 +1,3 @@
 rootProject.name = 'acm-classifier'
+
+include 'acm-classifier'
