@@ -2,12 +2,16 @@
 **/*.class
 
 #IDE & build settings
-/bin/
-/build/
+**/bin/
+**/build/
 /target/
-/.classpath
-/.project
+**/.classpath
+**/.project
 /.vscode
 
 # Jar files
 **/*.jar
+/.gradle/
+
+
+**/.settings
