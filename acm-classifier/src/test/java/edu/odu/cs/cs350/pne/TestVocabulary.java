@@ -10,7 +10,7 @@ public class TestVocabulary{
 	
 @Test
 public void testVocab() {
-	Vocabulary vocab = new Vocabulary();
+	Vocabulary vocab = new Vocabulary("Software");
 	
 }
 
