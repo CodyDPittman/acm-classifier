@@ -12,6 +12,7 @@ public class TestVocabulary{
 public void testVocab() {
 	Vocabulary vocab = new Vocabulary("Software");
 	assertEquals(vocab.getSubArea(), "Software");
+	Vocabulary vocab2 = new Vocabulary();
 }
 
 	
