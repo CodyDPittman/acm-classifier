@@ -2,7 +2,7 @@ package edu.odu.cs.cs350.pne;
 
 public class Vocabulary{
 	
-public String subArea;	
+public String subArea;
 
 	Vocabulary(){
 		subArea = "";
@@ -16,7 +16,7 @@ public String subArea;
 		return(subArea);
 	}
 	
-	public void addWord(String word) {
+	public void addWord(String word, int wordFrequency) {
 		
 	}
 	
