@@ -16,6 +16,15 @@ public void testVocab() {
 	assertEquals(vocab2.getSubArea(), "");
 }
 
+@Test
+public void testAddWord() {
+	Vocabulary vocab = new Vocabulary("Software");
+	vocab.addWord("program");
+	vocab.addWord("package");
+	vocab.addWord("compiler");
+}
+
+
 	
 	
 }
