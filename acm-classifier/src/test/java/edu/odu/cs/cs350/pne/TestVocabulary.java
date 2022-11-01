@@ -19,9 +19,10 @@ public void testVocab() {
 @Test
 public void testAddWord() {
 	Vocabulary vocab = new Vocabulary("Software");
-	vocab.addWord("program");
-	vocab.addWord("package");
-	vocab.addWord("compiler");
+	vocab.addWord("program", 1);
+	vocab.addWord("package", 1);
+	vocab.addWord("compiler",1);
+	
 }
 
 
