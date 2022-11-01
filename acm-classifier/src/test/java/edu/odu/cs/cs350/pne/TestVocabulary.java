@@ -26,7 +26,7 @@ public void testAddWord() {
 	assertEquals(vocab.vocabMap.get("package"), 1);
 	assertEquals(vocab.vocabMap.get("compiler"), 1);
 	vocab.addWord("program", 1);
-	//assertEquals(vocab.vocabMap.get("program"), 2);
+	assertEquals(vocab.vocabMap.get("program"), 2);
 	
 }
 
