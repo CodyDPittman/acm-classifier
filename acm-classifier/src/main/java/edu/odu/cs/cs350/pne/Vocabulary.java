@@ -4,20 +4,20 @@ import java.util.HashMap;
 
 public class Vocabulary{
 	
-public String subArea;
+public String docVocab;
 
 HashMap<String,Integer> vocabMap = new HashMap<>();
 
 	Vocabulary(){
-		subArea = "";
+		docVocab = "";
 	}
 
-	Vocabulary(String subjectArea){
-		subArea = subjectArea;
+	Vocabulary(String docVocabName){
+		docVocab = docVocabName;
 	}
 	
-	public String getSubArea() {
-		return(subArea);
+	public String getDocVocab() {
+		return(docVocab);
 	}
 	
 	public void addWord(String word, int wordFrequency) {

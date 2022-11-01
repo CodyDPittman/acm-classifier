@@ -10,15 +10,15 @@ public class TestVocabulary{
 	
 @Test
 public void testVocab() {
-	Vocabulary vocab = new Vocabulary("Software");
-	assertEquals(vocab.getSubArea(), "Software");
+	Vocabulary vocab = new Vocabulary("Document X's Vocab");
+	assertEquals(vocab.getDocVocab(), "Document X's Vocab");
 	Vocabulary vocab2 = new Vocabulary();
-	assertEquals(vocab2.getSubArea(), "");
+	assertEquals(vocab2.getDocVocab(), "");
 }
 
 @Test
 public void testAddWord() {
-	Vocabulary vocab = new Vocabulary("Software");
+	Vocabulary vocab = new Vocabulary("Document X's Vocab");
 	vocab.addWord("program", 1);
 	vocab.addWord("package", 1);
 	vocab.addWord("compiler",1);
