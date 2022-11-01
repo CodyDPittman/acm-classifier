@@ -16,4 +16,8 @@ public String subArea;
 		return(subArea);
 	}
 	
+	public void addWord(String word) {
+		
+	}
+	
 }
