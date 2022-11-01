@@ -11,7 +11,7 @@ public class TestVocabulary{
 @Test
 public void testVocab() {
 	Vocabulary vocab = new Vocabulary("Software");
-	
+	assertThat(vocab.getSubArea(), "Software");
 }
 
 	
