@@ -1,8 +1,11 @@
 package edu.odu.cs.cs350.pne;
 
+import java.util.HashMap;
+
 public class Vocabulary{
 	
 public String subArea;
+HashMap<String,Integer> vocabMap = new HashMap<>();
 
 	Vocabulary(){
 		subArea = "";
@@ -17,7 +20,7 @@ public String subArea;
 	}
 	
 	public void addWord(String word, int wordFrequency) {
-		
+		vocabMap.put(word, wordFrequency);
 	}
 	
 }
