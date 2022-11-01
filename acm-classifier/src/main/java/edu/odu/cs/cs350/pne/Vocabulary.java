@@ -8,5 +8,8 @@ public String subArea = "";
 		subArea = subjectArea;
 	}
 	
+	public String getSubArea() {
+		return(subArea);
+	}
 	
 }
