@@ -10,8 +10,8 @@ public class TestPDF{
 	
 @Test
 public void testPDFInput() {
-	pdfInput input = new pdfInput();
-	input.main("sample.pdf");
+	//pdfInput input = new pdfInput();
+	//input.main("sample.pdf");
 }
 
 
