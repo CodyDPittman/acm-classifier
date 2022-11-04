@@ -5,10 +5,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
-public class TestAscii{
+import junit.framework.TestCase;
+
+public class TestAscii extends TestCase{
     
     @Test
-    public void String testReadFile(){
+    public void testReadFile() throws exception{
         AsciiReader reader = new AsciiReader();
     }
 }
