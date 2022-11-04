@@ -23,3 +23,47 @@ public class pdfInput{
 	}
 }
 */
+
+//Importing the Java FileInputStream & File classes  
+import java.io.FileInputStream;  
+import java.io.File;  
+//Importing the required classes of Apache POI   
+import org.apache.tika.metadata.Metadata;  
+import org.apache.tika.sax.BodyContentHandler;  
+import org.apache.tika.parser.pdf.PDFParser;  
+import org.apache.tika.parser.ParseContext;  
+//main class  
+public class ReadPDFFile   
+{  
+	//Main method  
+	public static void pdfInput(String argvs[]) throws Exception  
+	{  
+		//Creating an object of the BodyContentHandler class  
+		BodyContentHandler cHandler = new BodyContentHandler();  
+		//Creating a file object  
+		File infile = new File("K:/sample.pdf");  
+		//Create a FileInputStream object on  
+		//the path specified using the created file object file  
+		FileInputStream input = new FileInputStream(infile);  
+		//Creating an object of the type Metadata  
+		Metadata mData = new Metadata();  
+		//Creating an object of the ParseContext class  
+		ParseContext pContext = new ParseContext();  
+		//creating an object of the class PDFParser  
+		PDFParser parser = new PDFParser();  
+		//calling the parse() method using the   
+		//object of the PDFParser class  
+		parser.parse(input, cHandler, mData, pContext);  
+		//Displaying the contents   
+		//of the pdf file by invoking the toString() method  
+		String text = cHandler.toString();  
+		System.out.println("Extracting the contents from the file: \n" + ch.toString());  
+		
+		
+		String[] arr = text.split(" ");
+        for ( String ss : arr) {
+            System.out.println(ss);//I have it printing right now, but I can have it output these strings pretty easily
+        }
+        //splitting the text into individual words
+	}  
+}  
