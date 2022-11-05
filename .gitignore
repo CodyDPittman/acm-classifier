@@ -1,4 +1,17 @@
-/bin/
-/.classpath
-/.project
+#Compiled class file
+**/*.class
+
+#IDE & build settings
+**/bin/
+**/build/
+/target/
+**/.classpath
+**/.project
 /.vscode
+
+# Jar files
+**/*.jar
+/.gradle/
+
+
+**/.settings
