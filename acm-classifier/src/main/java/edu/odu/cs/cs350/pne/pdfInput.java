@@ -25,7 +25,7 @@ public class pdfInput{
 */
 
 //Importing the Java FileInputStream & File classes  
-import java.io.FileInputStream;  
+/*import java.io.FileInputStream;  
 import java.io.File;  
 //Importing the required classes of Apache POI   
 import org.apache.tika.metadata.Metadata;  
@@ -66,4 +66,4 @@ public class ReadPDFFile
         }
         //splitting the text into individual words
 	}  
-}  
+}  */
