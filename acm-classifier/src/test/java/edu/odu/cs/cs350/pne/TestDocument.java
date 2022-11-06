@@ -20,5 +20,9 @@ public class TestDocument {
         doc.addWord("text", 1);
 
         doc.getRawSig();
+
+        assertEquals(doc.rawSignatures.get(0), 2);
+        assertEquals(doc.rawSignatures.get(1), 1);
+        assertEquals(doc.rawSignatures.get(2), 2);
     }
 }
