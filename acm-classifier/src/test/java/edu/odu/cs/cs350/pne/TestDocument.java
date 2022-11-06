@@ -1,11 +1,11 @@
 package edu.odu.cs.cs350.pne;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Vector;
 
 
 public class TestDocument {
@@ -19,6 +19,6 @@ public class TestDocument {
         doc.addWord("text", 1);
         doc.addWord("text", 1);
 
-        assertEquals(doc.rawSignatures().get(0), 2);
+        doc.getRawSig();
     }
 }
