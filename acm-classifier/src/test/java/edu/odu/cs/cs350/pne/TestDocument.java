@@ -5,11 +5,12 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 
 public class TestDocument {
     @Test
-    public void testRawSig() throws IOException {
+    public void testRawSig() {
         Document doc = new Document();
 
         doc.addWord("computer", 1);
