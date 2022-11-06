@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Vector;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Document extends Vocabulary{
     Vector<Integer> rawSignatures;
@@ -16,6 +17,11 @@ public class Document extends Vocabulary{
 
     public Document(String signatureFile) {
 
+    }
+
+    public Vector<Integer> getRawSig() {
+
+        return rawSignatures;
     }
     
 }
