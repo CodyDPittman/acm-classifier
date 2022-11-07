@@ -12,6 +12,9 @@ public class TestAsciiReader{
     @Test
     public void testReadToFile(){
         AsciiReader reader = new AsciiReader();
+        byte[] ascii = {};
+        assertNotNull(ascii);
+        
     }
 
 }
