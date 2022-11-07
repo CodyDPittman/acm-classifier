@@ -6,6 +6,31 @@ import java.nio.file.Files;
 
 public class AsciiReader{
     static String readToString(String p){
+        Path path = Paths.get(p);
+        /*creating an empty byte array */
+        byte[] ascii = {};
+
+
+        try{
+           /*storing all bytes into the array */
+            ascii = Files.readAllBytes(path);
+            
+        }
+
+        /*Catch block */
+
+        catch(IOException e){
+
+            /*printing out the error */
+
+
+            e.printStackTrace();
+
+        }
+
+
+
+
         return p;
 
 
