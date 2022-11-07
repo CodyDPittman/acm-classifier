@@ -38,6 +38,12 @@ public class AsciiReader{
 
 
     }
+
+    public static void main(String[] args)throws IOException{
+        /*the print statement will be used to print out the example ASCII file */
+        /*System.out.print(null);*/
+
+    }
 }
 
 
