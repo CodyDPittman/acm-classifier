@@ -19,12 +19,12 @@ public class AsciiReader{
 
         /*Catch block */
 
-        catch(IOException e){
+        catch(IOException except){
 
             /*printing out the error */
 
 
-            e.printStackTrace();
+            except.printStackTrace();
 
         }
 
