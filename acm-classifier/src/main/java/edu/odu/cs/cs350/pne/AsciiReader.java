@@ -28,10 +28,13 @@ public class AsciiReader{
 
         }
 
+        String stringContent = new String(ascii);
+        return stringContent;
 
 
 
-        return p;
+
+        
 
 
     }
