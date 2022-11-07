@@ -6,11 +6,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Vector;
-
-
 public class TestDocument {
     @Test
     public void testRawSig() {
@@ -24,8 +19,8 @@ public class TestDocument {
 
         doc.getRawSig();
 
-        /*assertEquals(doc.rawSignatures.get(0), 2);
+        assertEquals(doc.rawSignatures.get(0), 2);
         assertEquals(doc.rawSignatures.get(1), 1);
-        assertEquals(doc.rawSignatures.get(2), 2);*/
+        assertEquals(doc.rawSignatures.get(2), 2);
     }
 }
