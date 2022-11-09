@@ -69,9 +69,9 @@ public void test1wordPDFInput() throws Exception {
 	out = input.readPDFInput(chocIn);
 	
 	for ( String ss : out) {
-		LOG.info("test: " + ss);
+		//LOG.info("test: " + ss);
     }
-	LOG.info("test1: " + choco[0]);
+	//LOG.info("test1: " + choco[0]);
 	
 	assertEquals(out, choco);
 	
