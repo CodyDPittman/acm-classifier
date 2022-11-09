@@ -28,14 +28,14 @@ public class pdfInput{
 import java.io.FileInputStream;  
 import java.io.File;  
 
-/*
+
 //Importing the required classes of Apache POI   
 import org.apache.tika.metadata.Metadata;  
 import org.apache.tika.sax.BodyContentHandler;  
 import org.apache.tika.parser.pdf.PDFParser;  
 import org.apache.tika.parser.ParseContext;  
 
-*/
+
 /*
 import org.apache.tika.exception.TikaException;  
 import org.apache.tika.metadata.Metadata;  
@@ -55,7 +55,7 @@ public class pdfInput
 {  
 	//Main method  
 	public static String[] readPDFInput(String argsv[]) throws Exception  
-	{  /*
+	{  
 		//Creating an object of the BodyContentHandler class  
 		BodyContentHandler cHandler = new BodyContentHandler();  
 		//Creating a file object  
@@ -82,7 +82,7 @@ public class pdfInput
         for ( String ss : arr) {
             System.out.println(ss);//I have it printing right now, but I can have it output these strings pretty easily
         }
-        */ // this above is my favorite one, cannot get it to work due to issues with imports of rog.apache.tika. I have no idea why it doesn't work.
+         // this above is my favorite one, cannot get it to work due to issues with imports of rog.apache.tika. I have no idea why it doesn't work.
         
         //splitting the text into individual words
         //return arr;
