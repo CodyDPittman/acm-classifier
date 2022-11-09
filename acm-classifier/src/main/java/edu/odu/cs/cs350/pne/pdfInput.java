@@ -54,12 +54,12 @@ import org.apache.pdfbox.text.PDFTextStripperByArea;
 public class pdfInput   
 {  
 	//Main method  
-	public static String[] readPDFInput(String argsv[]) throws Exception  
+	public static String[] readPDFInput(String argsv) throws Exception  
 	{  
 		//Creating an object of the BodyContentHandler class  
 		BodyContentHandler cHandler = new BodyContentHandler();  
 		//Creating a file object  
-		File infile = new File(argsv[0]);  
+		File infile = new File(argsv);  
 		//Create a FileInputStream object on  
 		//the path specified using the created file object file  
 		FileInputStream input = new FileInputStream(infile);  

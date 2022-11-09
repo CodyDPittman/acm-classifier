@@ -9,13 +9,12 @@ import static org.hamcrest.Matchers.*;
 public class testPDF{
 	
 @Test
-public void testPDFInput() {
-	/*
+public void testPDFInput() throws Exception {
 	
-	String argsIn[];
-	argsIn = new String[1];
+	
+	String argsIn;
 	String output[] = new String[100];
-	argsIn[0] = "sample.pdf";
+	argsIn = "sample.pdf";
 	pdfInput input = new pdfInput();
 	
 	
@@ -48,7 +47,7 @@ public void testPDFInput() {
 	String[] arr = waterlooTest.split(" ");
 	
 	assertEquals(output = input.readPDFInput(argsIn), waterlooTest);
-	*/
+	
 }
 
 
