@@ -5,8 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
+import java.util.logging.Logger;
 
 public class testPDF{
+	private static final Logger LOG = Logger.getLogger(pdfInput.class.getName());
 	
 @Test
 public void testPDFInput() throws Exception {
@@ -15,8 +17,8 @@ public void testPDFInput() throws Exception {
 	String argsIn, chocIn;
 	String choco[] = new String[1];
 	choco[0]="chocolate";
-	argsIn = "C:/Users/admir/git/acm-classifier/acm-classifier/src/main/java/edu/odu/cs/cs350/pne/sample.pdf";
-	chocIn = "C:/Users/admir/git/acm-classifier/acm-classifier/src/main/java/edu/odu/cs/cs350/pne/chocolate.pdf";
+	argsIn = "C:/Users/admir/git/acm-classifier/acm-classifier/src/test/data/sample.pdf";
+	chocIn = "C:/Users/admir/git/acm-classifier/acm-classifier/src/test/data/chocolate.pdf";
 	pdfInput input = new pdfInput();
 	
 	
@@ -62,13 +64,14 @@ public void test1wordPDFInput() throws Exception {
 	String out[] = new String[1];
 	choco[0]="chocolate";
 	
-	chocIn = "C:/Users/admir/git/acm-classifier/acm-classifier/src/main/java/edu/odu/cs/cs350/pne/chocolate.pdf";
+	chocIn = "C:/Users/admir/git/acm-classifier/acm-classifier/src/test/data/chocolate.pdf";
 	pdfInput input = new pdfInput();
 	out = input.readPDFInput(chocIn);
 	
 	for ( String ss : out) {
-        System.out.println(ss);//I have it printing right now, but I can have it output these strings pretty easily
+		LOG.info("test: " + ss);
     }
+	LOG.info("test1: " + choco[0]);
 	
 	assertEquals(out, choco);
 	
