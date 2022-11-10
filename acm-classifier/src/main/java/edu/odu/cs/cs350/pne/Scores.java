@@ -6,45 +6,51 @@ public class Scores extends Vocabulary
 {  
 	String classification="none";
 	double score=0;
+	public Scores()
+	{
+		classification="none";
+		score=0;
+	}
 	public void setClassification(int input)
 	{
 		switch (input)
 		{
-		case 1:
+		case 0:
 			classification = "General Literature";
 			break;
-		case 2:
+		case 1:
 			classification = "Hardware";
 			break;
-		case 3:
+		case 2:
 			classification = "Computer systems organization";
 			break;
-		case 4:
+		case 3:
 			classification = "Software";
 			break;
-		case 5:
+		case 4:
 			classification = "Data";
 			break;
-		case 6:
+		case 5:
 			classification = "Theory of Computation";
 
 			break;
-		case 7:
+		case 6:
 			classification = "Mathematics of Computing";
 			break;
-		case 8:
+		case 7:
 			classification = "Information Systems";
 			break;
-		case 9:
+		case 8:
 			classification = "Computing and Methodologies";
 			break;
-		case 10:
+		case 9:
 			classification = "Computer Applications";
 			break;
-		case 11:
+		case 10:
 			classification = "Computing Milieux";
 			break;
 		}
+		
 	}
 	public void setScore(double inScore)
 	{score = inScore;}
