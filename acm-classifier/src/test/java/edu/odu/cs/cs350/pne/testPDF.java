@@ -9,13 +9,14 @@ import static org.hamcrest.Matchers.*;
 public class testPDF{
 	
 @Test
-public void testPDFInput() {
-	/*
+public void testPDFInput() throws Exception {
 	
-	String argsIn[];
-	argsIn = new String[1];
-	String output[] = new String[100];
-	argsIn[0] = "sample.pdf";
+	
+	String argsIn, chocIn;
+	String choco[] = new String[1];
+	choco[0]="chocolate";
+	argsIn = "C:/Users/admir/git/acm-classifier/acm-classifier/src/main/java/edu/odu/cs/cs350/pne/sample.pdf";
+	chocIn = "C:/Users/admir/git/acm-classifier/acm-classifier/src/main/java/edu/odu/cs/cs350/pne/chocolate.pdf";
 	pdfInput input = new pdfInput();
 	
 	
@@ -47,8 +48,31 @@ public void testPDFInput() {
 			+ "Ooh-ooh-ooh, waterloo";
 	String[] arr = waterlooTest.split(" ");
 	
-	assertEquals(output = input.readPDFInput(argsIn), waterlooTest);
-	*/
+	//assertEquals(input.readPDFInput(chocIn), choco);
+	assertEquals(input.readPDFInput(argsIn), arr);
+	
+	
+}
+@Test
+public void test1wordPDFInput() throws Exception {
+	
+	
+	String argsIn, chocIn;
+	String choco[] = new String[1];
+	String out[] = new String[1];
+	choco[0]="chocolate";
+	
+	chocIn = "C:/Users/admir/git/acm-classifier/acm-classifier/src/main/java/edu/odu/cs/cs350/pne/chocolate.pdf";
+	pdfInput input = new pdfInput();
+	out = input.readPDFInput(chocIn);
+	
+	for ( String ss : out) {
+        System.out.println(ss);//I have it printing right now, but I can have it output these strings pretty easily
+    }
+	
+	assertEquals(out, choco);
+	
+	
 }
 
 
