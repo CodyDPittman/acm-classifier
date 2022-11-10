@@ -16,6 +16,9 @@ public class TestAsciiReader{
         assertNotNull(ascii);
         
     }
+    //create an asci reader
+    //create a file withh known content
+    // and assert that you have the files in the known content.
 
 }
     
