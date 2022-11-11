@@ -49,6 +49,8 @@ public class reportListing extends Document
 			reportScores[k].setScore(Math.random());
 		}
 		
+		//the above is primarily to generate the data, will be removed for final version
+		
 		for (int i = 0; i < reportScores.length; i++) {
 			 
             // Inner nested loop pointing 1 index ahead
@@ -56,7 +58,7 @@ public class reportListing extends Document
  
                 // Checking elements
                 Scores temp;
-                if (reportScores[j].getScore() <= reportScores[i].getScore()) {
+                if (reportScores[j].getScore() >= reportScores[i].getScore()) {
  
                     // Swapping
                     temp = reportScores[i];
@@ -66,9 +68,19 @@ public class reportListing extends Document
             }
 		}
             
+		
+		int x=1;
+		for (int m=1; m<reportScores.length;m++)
+		{
+			if (reportScores[m].getScore()>reportScores[0].getScore()-(reportScores[0].getScore()*.05))
+			{
+				x++;
+			}
+		}
+		
 		String reportData="";
 		
-		for(int l=0; l<11; l++)
+		for(int l=0; l<x; l++)
 		{
 			reportData = reportData + reportScores[l].getClassification() + " score: " + reportScores[l].getScore()+"\n";
 		}

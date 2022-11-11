@@ -25,7 +25,8 @@ public class pdfInput{
 */
 
 //Importing the Java FileInputStream & File classes  
-import java.io.FileInputStream;  
+import java.io.FileInputStream;
+import java.nio.file.Path;
 import java.io.File;  
 
 
@@ -86,7 +87,8 @@ public class pdfInput
 		LOG.info("arr length: " + arr.length);
         for (int i=0; i<arr.length; i++ ) {
         	ss= arr[i].trim();
-        	//LOG.info("word: " + ss);//I have it printing right now, but I can have it output these strings pretty easily
+        	arr[i]=ss;
+        	LOG.info("word: " + ss);//I have it printing right now, but I can have it output these strings pretty easily
         }
          // this above is my favorite one, cannot get it to work due to issues with imports of rog.apache.tika. I have no idea why it doesn't work.
         
