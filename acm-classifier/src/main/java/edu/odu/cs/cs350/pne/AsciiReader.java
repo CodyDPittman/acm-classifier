@@ -4,7 +4,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.Files;
 
-public class AsciiReader{
+public class AsciiReader{ 
     static String readToString(String p){
         Path path = Paths.get(p);
         /*creating an empty byte array */
@@ -32,7 +32,7 @@ public class AsciiReader{
         return stringContent;
 
 
-
+    
 
         
 
