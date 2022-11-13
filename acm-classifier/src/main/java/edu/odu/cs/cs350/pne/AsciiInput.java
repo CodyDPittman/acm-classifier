@@ -7,5 +7,13 @@ import java.io.IOException;
  
 
 public class AsciiInput {
+
+    private static final String FileName = "C:\\test\\test.txt";
+
+    public Object addFile(String filename) {
+        return FileName;
+    }
+
+    
     
 }
