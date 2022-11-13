@@ -7,9 +7,12 @@ import static org.hamcrest.Matchers.*;
 
 public class TestAsciiInput{
 
+    private static final String FileName = "C:\\test\\test.txt";
+
     @Test
     public void testaddFile(){
         AsciiInput input = new AsciiInput();
+        assertThat(input.addFile(FileName), equalTo(FileName));
 
     }
 }
