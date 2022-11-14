@@ -23,3 +23,49 @@ test {
 	ignoreFailures = true
 	useJUnitPlatform()
 }
+
+def websiteRepo = 'git@github.com:CodyDPittman/acm-classifier.git'
+
+task clearPages(type: Delete) {
+    delete 'build/gh-pages'
+}
+
+task clonePages(dependsOn: ['clearPages']) {                
+    doLast {
+        exec {
+            workingDir = '.'
+            commandLine = ['git', 'clone', websiteRepo, 'build/gh-pages']
+        }
+    }
+}
+
+
+task copyWebsite (dependsOn: ['clonePages']) {   
+    doLast {
+        ant.copy (todir: 'build/gh-pages') {
+            fileset(dir: 'build/jbake')
+        }
+    }
+}
+
+
+
+task updateGHPages (dependsOn: ['copyWebsite']) {
+    group = "Reporting"
+    description  'Copies reports to the website repo and pushes to GitHub'
+    doLast {
+        def pagesDir = "$buildDir/gh-pages"
+        exec {
+            workingDir = 'build/gh-pages'                                
+            commandLine = ['git', 'add', '.']
+        }
+        exec {
+            workingDir = 'build/gh-pages'
+            commandLine = ['cmd', 'git', 'commit', '-m', 'Updating-webpages']   
+        }
+        exec {
+            workingDir = 'build/gh-pages'
+            commandLine = ['git', 'push']
+        }
+    }
+}
