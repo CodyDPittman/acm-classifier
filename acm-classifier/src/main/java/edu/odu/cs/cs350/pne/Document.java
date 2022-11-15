@@ -4,7 +4,7 @@ import java.util.Vector;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Document extends Vocabulary{
+public class Document extends Scores{
     public Vector<Integer> rawSignatures;
     String signatureFile = ("rawSignatures.txt");
 
@@ -15,6 +15,8 @@ public class Document extends Vocabulary{
     public Document(String signatureFile) {
 
     }
+    private double genLit, hardware, compSysOrg, software, data, theoryComp, mathComp, infSys, compMeth, compApp, compMil;// the scores for each category.
+    
 
     public Vector<Integer> getRawSig() {
         Map<String, Integer> rawSig = new HashMap<String, Integer>();
