@@ -54,6 +54,7 @@ import org.apache.pdfbox.text.PDFTextStripperByArea;
 
 //import org.apache.tika.parser.pdf;
 //main class  
+/*
 public class pdfInput   
 {  
 	private static final Logger LOG = Logger.getLogger(pdfInput.class.getName());
@@ -109,6 +110,7 @@ public class pdfInput
 		fail[0]="failed";
         return fail;
         */
+/*
 	}  
 	/*
 	public static void otherPDFInput(String[] args) throws IOException, SAXException, TikaException {  
@@ -127,5 +129,6 @@ public class pdfInput
         }catch(Exception e) {System.out.println("Exception message: "+ e.getMessage());}  
       }  
       */
-	
+/*	
 }  
+*/

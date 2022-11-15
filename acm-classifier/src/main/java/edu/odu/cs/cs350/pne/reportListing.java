@@ -1,7 +1,7 @@
 package edu.odu.cs.cs350.pne;
 
 import java.util.logging.Logger;
-
+/*
 public class reportListing extends Document
 {  
 	
@@ -88,5 +88,5 @@ public class reportListing extends Document
 		return reportData;
 	}
 }
-
+*/
 

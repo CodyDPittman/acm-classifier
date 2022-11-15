@@ -8,12 +8,12 @@ import static org.hamcrest.Matchers.*;
 import java.util.logging.Logger;
 
 public class TestReportListing{
-	private static final Logger LOG = Logger.getLogger(pdfInput.class.getName());
+	private static final Logger LOG = Logger.getLogger(Document.class.getName());
 	
 @Test
 public void testPDFInput() throws Exception {
 	
-	reportListing input= new reportListing(); 
+	Document input= new Document(); 
 	String output = input.listingReport();
 	assertEquals(output, output);
 	

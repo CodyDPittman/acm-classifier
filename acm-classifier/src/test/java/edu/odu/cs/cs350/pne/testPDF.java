@@ -8,7 +8,7 @@ import static org.hamcrest.Matchers.*;
 import java.util.logging.Logger;
 
 public class testPDF{
-	private static final Logger LOG = Logger.getLogger(pdfInput.class.getName());
+	private static final Logger LOG = Logger.getLogger(Document.class.getName());
 	
 @Test
 public void testPDFInput() throws Exception {
@@ -19,7 +19,7 @@ public void testPDFInput() throws Exception {
 	//choco[0]="chocolate";
 	argsIn = "C:/Users/admir/git/acm-classifier/acm-classifier/src/test/data/sample.pdf";
 	//chocIn = "C:/Users/admir/git/acm-classifier/acm-classifier/src/test/data/chocolate.pdf";
-	pdfInput input = new pdfInput();
+	Document input = new Document();
 	
 	
 	String  waterlooTest="My, my, at Waterloo, Napoleon did surrender "
@@ -78,7 +78,7 @@ public void test1wordPDFInput() throws Exception {
 	choco[0]="chocolate";
 	
 	chocIn = "C:/Users/admir/git/acm-classifier/acm-classifier/src/test/data/chocolate.pdf";
-	pdfInput input = new pdfInput();
+	Document input = new Document();
 	out = input.readPDFInput(chocIn);
 	String ss;
 	for (int i=0; i<choco.length; i++ ) {
