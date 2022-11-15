@@ -44,7 +44,7 @@ task clonePages() {
     }
 }
 
-task copyReports (type: dependsOn: ['clonePages']) {
+task copyReports (dependsOn: ['clonePages']) {
     doLast {
     	def pagesDir = "$buildDir/gh-pages"
         ant.copy (todir: pagesDir) {
