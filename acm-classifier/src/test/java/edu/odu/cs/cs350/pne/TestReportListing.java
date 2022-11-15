@@ -11,7 +11,7 @@ public class TestReportListing{
 	private static final Logger LOG = Logger.getLogger(Document.class.getName());
 	
 @Test
-public void testPDFInput() throws Exception {
+public void testReportsInput() throws Exception {
 	
 	Document input= new Document(); 
 	String output = input.listingReport();
@@ -19,6 +19,15 @@ public void testPDFInput() throws Exception {
 	
 	
 }
+@Test
+public void testMultipleReportsInput() throws Exception {
 	
+	Document input= new Document(); 
+	String output = "Abba";
+	input.MultiplelistingReport(10);
+	assertEquals(output, output);
+	
+	
+}
 	
 }

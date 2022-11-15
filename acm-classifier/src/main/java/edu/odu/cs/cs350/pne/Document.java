@@ -2,6 +2,7 @@ package edu.odu.cs.cs350.pne;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.PrintWriter;
 import java.util.Vector;
 import java.util.HashMap;
 import java.util.Map;
@@ -160,6 +161,19 @@ public class Document extends Scores{
 		}
 		LOG.info(reportData);
 		return reportData;
+	}
+	
+	public void MultiplelistingReport(int docs) throws Exception //inputs will really be document class types ex: Document Arr[]
+	{
+		File outFile = new File("C:/Users/admir/git/acm-classifier/acm-classifier/src/test/data/outFile.txt");
+		PrintWriter DataOut = new PrintWriter(outFile);
+		
+		for (int i=0; i< docs; i++)
+		{
+			DataOut.print(this.listingReport());
+			DataOut.print("\n");
+		}
+		DataOut.close();
 	}
     
 }
