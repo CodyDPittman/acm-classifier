@@ -16,4 +16,9 @@ public class TestAsciiInput{
         
 
     }
+
+    @Test
+    public void testReadToFile(){
+        
+    }
 }
