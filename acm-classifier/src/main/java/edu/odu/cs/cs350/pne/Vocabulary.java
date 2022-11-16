@@ -2,7 +2,8 @@ package edu.odu.cs.cs350.pne;
 
 import java.util.HashMap;
 
-public class Vocabulary {
+public class Vocabulary 
+{
 	
 public String docVocab;
 

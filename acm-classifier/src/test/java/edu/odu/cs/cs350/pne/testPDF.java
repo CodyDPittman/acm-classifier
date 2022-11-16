@@ -48,11 +48,21 @@ public void testPDFInput() throws Exception {
 			+ "Ooh-ooh-ooh, waterloo, knowing my fate is to be with you "
 			+ "Wa-wa-wa-wa, waterloo, finally facing my waterloo "
 			+ "Ooh-ooh-ooh, waterloo";
+	waterlooTest = waterlooTest.replace(",", "");
+	waterlooTest = waterlooTest.replace(".", "");
+	waterlooTest = waterlooTest.replace("!", "");
+	waterlooTest = waterlooTest.replace("?", "");
+	waterlooTest = waterlooTest.replace(":", "");
+	waterlooTest = waterlooTest.replace("-", " ");
+	waterlooTest = waterlooTest.replace("&", " and ");//replacing bad characters
+	
 	String[] arr = waterlooTest.split(" ");
+	
 	
 	String ss;
 	for (int i=0; i<arr.length; i++ ) {
     	ss= arr[i].trim();
+    	ss=ss.toLowerCase();
     	arr[i]=ss;
     }
 
@@ -81,8 +91,10 @@ public void test1wordPDFInput() throws Exception {
 	Document input = new Document();
 	out = input.readPDFInput(chocIn);
 	String ss;
+	
 	for (int i=0; i<choco.length; i++ ) {
     	ss= choco[i].trim();
+    	ss=ss.toLowerCase();
     	choco[i]=ss;
     }
 	//LOG.info("test1: " + choco[0]);

@@ -16,6 +16,8 @@ import java.util.logging.Logger;
 public class Document extends Scores{
     public Vector<Integer> rawSignatures;
     String signatureFile = ("rawSignatures.txt");
+    Vocabulary docVocab = new Vocabulary();
+    
 
     public Document() {
 
@@ -43,8 +45,12 @@ public class Document extends Scores{
         return rawSignatures;
     }
     
+    
+    
+    
+    //Pdf reader
     private static final Logger LOG = Logger.getLogger(Document.class.getName());
-	//Main method  
+	
 	public String[] readPDFInput(String argsv) throws Exception  
 	{  
 		//Creating an object of the BodyContentHandler class  
@@ -69,22 +75,37 @@ public class Document extends Scores{
 		//LOG.info("Extracting the contents from the file: \n" + cHandler.toString());  
 		
 		text=text.trim();
+		text = text.replace(",", "");
+		text = text.replace(".", "");
+		text = text.replace("!", "");
+		text = text.replace("?", "");
+		text = text.replace(":", "");
+		text = text.replace("-", " ");
+		text = text.replace("&", " and ");//replacing bad characters
+		
+		
+		
 		String[] arr = text.split(" ");
 		String ss;
 		LOG.info("arr length: " + arr.length);
         for (int i=0; i<arr.length; i++ ) {
         	ss= arr[i].trim();
+        	ss=ss.toLowerCase();
         	arr[i]=ss;
         	LOG.info("word: " + ss);//I have it printing right now, but I can have it output these strings pretty easily
+        	
+        	docVocab.addWord(ss, 1);
         }
          // this above is my favorite one, cannot get it to work due to issues with imports of rog.apache.tika. I have no idea why it doesn't work.
         
         //splitting the text into individual words
+        
+        
         return arr;
 	}
 	
 
-	//Main method  
+	//Producing a report, uses random scores right now 
 	
 	public String listingReport() //inputs will really be a document class type
 	{  
