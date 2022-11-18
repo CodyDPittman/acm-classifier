@@ -20,7 +20,12 @@ HashMap<String,Integer> vocabMap = new HashMap<>();
 		return(docVocab);
 	}
 	
-	public void addWord(String word, int wordFrequency) {
+	/* This function creates an individual document 
+	 * mapping that collects the words of the document
+	 * along with their frequencies. This is NOT the collective
+	 * vocabulary.
+	 */
+	public void docMapping(String word, int wordFrequency) {
 		
 		//Checking to see if the word exists
 		if(vocabMap.get(word) == null)

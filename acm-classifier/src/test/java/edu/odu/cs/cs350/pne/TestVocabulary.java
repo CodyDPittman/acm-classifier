@@ -17,15 +17,15 @@ public void testVocab() {
 }
 
 @Test
-public void testAddWord() {
+public void testdocMapping() {
 	Vocabulary vocab = new Vocabulary("Document X's Vocab");
-	vocab.addWord("program", 1);
-	vocab.addWord("package", 1);
-	vocab.addWord("compiler",1);
+	vocab.docMapping("program", 1);
+	vocab.docMapping("package", 1);
+	vocab.docMapping("compiler",1);
 	assertEquals(vocab.vocabMap.get("program"), 1);
 	assertEquals(vocab.vocabMap.get("package"), 1);
 	assertEquals(vocab.vocabMap.get("compiler"), 1);
-	vocab.addWord("program", 1);
+	vocab.docMapping("program", 1);
 	assertEquals(vocab.vocabMap.get("program"), 2);
 	
 }
