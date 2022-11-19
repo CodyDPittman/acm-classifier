@@ -79,7 +79,7 @@ task reports (type: Copy){
 	from 'src/main/html'
 	into 'build/reports'
 	
-	dependsOn 'javadoc', 'test'
+	dependsOn 'javadoc', 'test', 'copyReports'
 }
 
 task deployReports (type: Copy){
