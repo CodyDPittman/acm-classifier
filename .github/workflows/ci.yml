@@ -24,6 +24,7 @@ jobs:
     - name: Copy reports
       working-directory: .
       run: |
+        ./gradlew cloneReports
         ./gradlew reports
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4.2.5
