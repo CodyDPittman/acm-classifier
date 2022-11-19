@@ -22,7 +22,7 @@ jobs:
       working-directory: .
       run: ./gradlew build
     - name: Copy reports
-      working-directory: .
+      working-directory: ..
       run: | 
         ./gradlew reports
     - name: Deploy
