@@ -2,5 +2,5 @@
 
 ACM-Classifier
 
-* [Tests](acm-classifier/reports/tests/test/)
-* [JavaDoc](acm-classifier/javadoc/)
+* [Tests](/tests/test/)
+* [JavaDoc](javadoc/)
