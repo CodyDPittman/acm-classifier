@@ -25,8 +25,9 @@ jobs:
       working-directory: .
       run: |
         ./gradlew reports
+        ls acm-classifier/build/reports
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4.2.5
       with:
         branch: gh-pages
-        folder: build/reports
+        folder: acm-classifier/build/reports
