@@ -3,4 +3,4 @@
 ACM-Classifier
 
 * [Tests](acm-classifier/reports/tests/test/)
-* [JavaDoc](acm-classifier/reports/javadoc/)
+* [JavaDoc](acm-classifier/javadoc/)
