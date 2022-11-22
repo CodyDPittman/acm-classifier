@@ -15,7 +15,7 @@ public class AsciiInput {
         return FileName;
     }
 
-    public void ReadToFile(){
+    public static void main(String[] args){
     try(BufferedReader br = new BufferedReader(new FileReader(FileName))) {
         String  currLine;
         while((currLine = br.readLine()) != null){
@@ -23,6 +23,7 @@ public class AsciiInput {
         }
         
     } catch (Exception e) {
+        e.printStackTrace();
 
         // TODO: handle exception
     }
