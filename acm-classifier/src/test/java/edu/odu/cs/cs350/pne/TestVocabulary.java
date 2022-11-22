@@ -3,6 +3,9 @@ package edu.odu.cs.cs350.pne;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.lang.reflect.Array;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -35,7 +38,11 @@ public void testaddWord() {
 	
 	Vocabulary vocab = new Vocabulary();
 	vocab.addWord("program");
-	
+	vocab.addWord("computer");
+	vocab.addWord("apple");
+	assertEquals(vocab.collectiveVocab.toArray()[0], "apple");
+	assertEquals(vocab.collectiveVocab.toArray()[1], "computer");
+	assertEquals(vocab.collectiveVocab.toArray()[2], "program");
 	
 }
 

@@ -1,12 +1,15 @@
 package edu.odu.cs.cs350.pne;
 
 import java.util.HashMap;
+import java.util.*;
+import java.text.Collator;
 
 public class Vocabulary {
 	
 public String docVocab;
 
 HashMap<String,Integer> vocabMap = new HashMap<>();
+Collection<String> collectiveVocab = new TreeSet<String>(Collator.getInstance());
 
 	Vocabulary(){
 		docVocab = "";
@@ -36,13 +39,13 @@ HashMap<String,Integer> vocabMap = new HashMap<>();
 		vocabMap.computeIfPresent(word, (k,v) -> v+1); //If word exists then update the word's frequency
 	}
 	
-	/* This function creates a collective alphabetically sorted
-	 * vocabulary for all documents that have been processed.
+	/* This function creates a collection of strings sorted
+	 * by alphabetical order for all documents that have been processed.
 	 * 
 	 */
 	public void addWord(String word){
 		
-		
+		collectiveVocab.add(word);
 		
 	}
 }
