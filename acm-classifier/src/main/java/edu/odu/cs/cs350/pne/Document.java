@@ -186,7 +186,7 @@ public class Document extends Scores{
 	
 	public void MultiplelistingReport(int docs) throws Exception //inputs will really be document class types ex: Document Arr[]
 	{
-		File outFile = new File("C:/Users/admir/git/acm-classifier/acm-classifier/src/test/data/outFile.txt");
+		File outFile = new File("src/test/data/outFile.txt");
 		PrintWriter DataOut = new PrintWriter(outFile);
 		
 		for (int i=0; i< docs; i++)

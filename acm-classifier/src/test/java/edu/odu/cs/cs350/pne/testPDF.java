@@ -17,7 +17,7 @@ public void testPDFInput() throws Exception {
 	String argsIn, chocIn;
 	//String choco[] = new String[1];
 	//choco[0]="chocolate";
-	argsIn = "C:/Users/admir/git/acm-classifier/acm-classifier/src/test/data/sample.pdf";
+	argsIn = "src/test/data/sample.pdf";
 	//chocIn = "C:/Users/admir/git/acm-classifier/acm-classifier/src/test/data/chocolate.pdf";
 	Document input = new Document();
 	
@@ -87,7 +87,8 @@ public void test1wordPDFInput() throws Exception {
 	String out[] = new String[1];
 	choco[0]="chocolate";
 	
-	chocIn = "C:/Users/admir/git/acm-classifier/acm-classifier/src/test/data/chocolate.pdf";
+	chocIn = "src/test/data/chocolate.pdf";
+	//chocIn = "///////src/test/data/chocolate.pdf";
 	Document input = new Document();
 	out = input.readPDFInput(chocIn);
 	String ss;
@@ -99,7 +100,7 @@ public void test1wordPDFInput() throws Exception {
     }
 	//LOG.info("test1: " + choco[0]);
 	String test= "chocolate";
-	String output = choco[0];
+	String output = choco[0]; 
 	
 	assertEquals(test, output);
 	
