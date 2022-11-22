@@ -30,6 +30,14 @@ public void testdocMapping() {
 	
 }
 
+@Test
+public void testaddWord() {
+	
+	Vocabulary vocab = new Vocabulary();
+	vocab.addWord("program");
+	
+	
+}
 
 	
 	

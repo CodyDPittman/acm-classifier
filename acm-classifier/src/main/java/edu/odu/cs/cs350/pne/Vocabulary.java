@@ -36,4 +36,13 @@ HashMap<String,Integer> vocabMap = new HashMap<>();
 		vocabMap.computeIfPresent(word, (k,v) -> v+1); //If word exists then update the word's frequency
 	}
 	
+	/* This function creates a collective alphabetically sorted
+	 * vocabulary for all documents that have been processed.
+	 * 
+	 */
+	public void addWord(String word){
+		
+		
+		
+	}
 }
