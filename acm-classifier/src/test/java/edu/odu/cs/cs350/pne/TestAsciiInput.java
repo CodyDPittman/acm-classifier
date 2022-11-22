@@ -29,7 +29,6 @@ public class TestAsciiInput{
     @Test
     public void testReadToFile(){
     AsciiInput reader = new AsciiInput();
-    reader.ReadToFile();
     try(BufferedReader br = new BufferedReader(new FileReader(FileName))) {
         
     } catch (Exception e) {
