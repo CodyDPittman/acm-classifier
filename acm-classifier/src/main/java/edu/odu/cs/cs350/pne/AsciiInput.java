@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class AsciiInput {
 
-    private static final String FileName = "C:\\test\\test.txt";
+    private static final String FileName ="C:\\Users\\alber\\OneDrive\\Desktop\\acmClassifier\\acm-classifier\\acm-classifier\\src\\main\\java\\edu\\odu\\cs\\cs350\\pne\\example.txt";
 
     /*May use public Object addFile(String filename) if needed */
     public String addFile(String filename) {
