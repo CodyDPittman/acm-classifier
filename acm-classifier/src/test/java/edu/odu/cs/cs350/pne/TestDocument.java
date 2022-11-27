@@ -11,11 +11,11 @@ public class TestDocument {
     public void testRawSig() {
         Document doc = new Document();
 
-        doc.addWord("computer", 1);
-        doc.addWord("computer", 1);
-        doc.addWord("science", 1);
-        doc.addWord("text", 1);
-        doc.addWord("text", 1);
+        doc.docMapping("computer", 1);
+        doc.docMapping("computer", 1);
+        doc.docMapping("science", 1);
+        doc.docMapping("text", 1);
+        doc.docMapping("text", 1);
 
         doc.getRawSig();
 
