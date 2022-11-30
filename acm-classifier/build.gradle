@@ -1,6 +1,18 @@
 plugins{
 	id 'java'
+	id "com.github.spotbugs" version "5.0.6"
 }
+
+spotbugsMain{
+	ignoreFailures = true
+	effort = 'max'
+	reportLevel = 'medium'
+	reports{
+	xml.enabled = false
+	html.enabled = true
+}
+
+spotbugsTest.enabled = false
 
 java {
 	sourceCompatibility = JavaVersion.toVersion(11)
