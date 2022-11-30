@@ -48,6 +48,13 @@ public class TestAsciiInput{
        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
        assertThat(input.toString(), contains("Enter your name:") != null);
     }
+
+    @Test
+    public void testReadTxt(){
+        AsciiInput read = new AsciiInput();
+        read.ReadTxt();
+    }
+
 }
 
     
