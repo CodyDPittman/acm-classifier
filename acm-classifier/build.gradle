@@ -102,6 +102,8 @@ task reports (type: Copy){
 	into 'build/reports'
 	from '../report_accumulator/build/reports'
 	into 'build/reports'
+	from 'build/reports/spotbugs'
+	into 'build/reports'
 	
 	dependsOn 'javadoc', 'test'
 }
