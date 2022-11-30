@@ -100,7 +100,7 @@ task reports (type: Copy){
 	from 'src/main/html'
 	into 'build/reports'
 	
-	dependsOn 'javadoc', 'test', 'reportStats', 'spotbugsMain'
+	dependsOn 'javadoc', 'test'
 }
 
 task deployReports (type: Copy){
