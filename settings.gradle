@@ -1,4 +1,3 @@
-rootProject.name = 'acm-classifier'
 
 pluginManagement {
 	repositories{
@@ -9,4 +8,7 @@ pluginManagement {
         mavenCentral()
     }
 }
+
+rootProject.name = 'acm-classifier'
+
 include 'acm-classifier'
