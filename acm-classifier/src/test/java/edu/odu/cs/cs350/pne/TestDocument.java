@@ -6,6 +6,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.InputStreamReader;
+
 public class TestDocument {
     @Test
     public void testRawSig() {
@@ -23,4 +27,31 @@ public class TestDocument {
         //assertEquals(doc.rawSignatures.get(1), 1);
         //assertEquals(doc.rawSignatures.get(2), 2);
     }
+
+    private static final String FileName = "C:\\Users\\alber\\OneDrive\\Desktop\\acmClassifier\\acm-classifier\\acm-classifier\\src\\main\\java\\edu\\odu\\cs\\cs350\\pne\\asciinput.txt";
+
+    @Test
+    public void testaddFile(){
+        Document input = new Document();
+        input.addFile(FileName);
+        assertThat(input.addFile(FileName), equalTo(FileName));
+        
+
+    }
+
+    @Test
+    public void testReadToFile(){
+    Document reader = new Document();
+    try(BufferedReader br = new BufferedReader(new FileReader(FileName))) {
+        
+    } catch (Exception e) {
+        String currLine;
+        e.printStackTrace();
+        assertFalse(false);
+        // TODO: handle exception
+        
+    }
+       
+    }
+
 }

@@ -203,7 +203,11 @@ public class Document extends Scores{
 	private static final String FileName = "C:\\Users\\alber\\OneDrive\\Desktop\\acmClassifier\\acm-classifier\\acm-classifier\\src\\main\\java\\edu\\odu\\cs\\cs350\\pne\\asciinput.txt";
 	//params of main function will change based on the other parameters used in the other functions
 	//This will be accomplished by using function overloading.
-	public static void main(String[] args){
+	
+	public String addFile(String filename) {
+        return FileName;
+    }
+	public  void readAsciiText(String[] args){
 		//used the try catch structure to prevent resource leak
 		try(BufferedReader br = new BufferedReader(new FileReader(FileName));) {
 			String currentLine;
