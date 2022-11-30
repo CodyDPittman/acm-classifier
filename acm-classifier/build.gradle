@@ -103,7 +103,7 @@ task reports (type: Copy){
 	from '../report_accumulator/build/reports'
 	into 'build/reports'
 	
-	dependsOn 'javadoc', 'test', ':report_accumulator:reports'
+	dependsOn 'javadoc', 'test'
 }
 
 task deployReports (type: Copy){
