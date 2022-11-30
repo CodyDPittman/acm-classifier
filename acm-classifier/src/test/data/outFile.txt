@@ -1,0 +1,22 @@
+Computer Applications score: 0.929413272600229
+
+Mathematics of Computing score: 0.9768225795645957
+Computing Milieux score: 0.9589708961448812
+
+Theory of Computation score: 0.8650922591143366
+
+Computing Milieux score: 0.9761351320351048
+General Literature score: 0.9724680723692629
+
+Computer systems organization score: 0.854111626376952
+
+Software score: 0.9765866855663111
+
+Mathematics of Computing score: 0.8801852896685264
+
+Hardware score: 0.8479762034771684
+
+Theory of Computation score: 0.9466345716048259
+
+Computing Milieux score: 0.9801841278510688
+
