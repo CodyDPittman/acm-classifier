@@ -1,7 +1,5 @@
 rootProject.name = 'acm-classifier'
 
-include 'acm-classifier'
-
 pluginManagement {
 	repositories{
 		ivy { // Use my own CS dept repo
@@ -11,3 +9,4 @@ pluginManagement {
         mavenCentral()
     }
 }
+include 'acm-classifier'
