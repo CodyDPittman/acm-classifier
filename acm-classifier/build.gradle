@@ -8,8 +8,9 @@ spotbugsMain{
 	effort = 'max'
 	reportLevel = 'medium'
 	reports{
-	xml.enabled = false
-	html.enabled = true
+		xml.enabled = false
+		html.enabled = true
+	}
 }
 
 spotbugsTest.enabled = false
