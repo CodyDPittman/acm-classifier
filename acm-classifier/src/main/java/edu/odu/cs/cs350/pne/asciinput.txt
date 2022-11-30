@@ -1,2 +1,0 @@
-Hello world!
-We will be reading in the file for this project
