@@ -24,9 +24,10 @@ jobs:
     - name: Copy reports
       working-directory: .
       run: |
-        ./gradlew reportStats
-        ./gradlew check
         ./gradlew reports
+        ./gradlew check
+        ./gradlew reportStats
+        ./gradlew spotbugsMain
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4.2.5
       with:
