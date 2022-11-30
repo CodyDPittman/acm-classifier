@@ -4,5 +4,5 @@ ACM-Classifier
 
 * [Tests](tests/test/)
 * [JavaDoc](javadoc)
-* [SpotBugs] (spotbugs/main.html/)
+* [SpotBugs] (spotbugs/main.html)
 
