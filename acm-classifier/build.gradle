@@ -17,7 +17,7 @@ spotbugsMain {
 spotbugsTest.enabled = false
 
 reportStats {
-    reportsURL = 'https://codydpittman.github.io/acm-classifier/reports'
+    reportsURL = 'https://codydpittman.github.io/acm-classifier'
     htmlSourceDir = file('src/main/html')  // default value
     reportsDir = file('build/reports') // default value
     buildID = "12345"                  // defaults to current date, but can be any run identifier
