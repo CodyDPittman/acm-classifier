@@ -6,17 +6,6 @@ plugins{
 
 
 
-
-task spotbugsMain{
-	ignoreFailures = true
-	effort = 'max'
-	reportLevel = 'medium'
-	reports{
-		xml.enabled = false
-		html.enabled = true
-	}
-}
-
 spotbugsTest.enabled = false
 
 java {
