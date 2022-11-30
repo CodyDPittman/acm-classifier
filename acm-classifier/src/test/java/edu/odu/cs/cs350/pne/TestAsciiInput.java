@@ -11,11 +11,13 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Currency;
+import java.util.Scanner;
 
 public class TestAsciiInput{
 
-    private static final String FileName = "C:\\test\\test.txt";
+    private static final String FileName = "C:\\Users\\alber\\OneDrive\\Desktop\\acmClassifier\\acm-classifier\\acm-classifier\\src\\main\\java\\edu\\odu\\cs\\cs350\\pne\\example.txt";
 
     @Test
     public void testaddFile(){
@@ -40,7 +42,13 @@ public class TestAsciiInput{
     }
        
     }
+
+    @Test
+    public void testUserInput(){
+       BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+       assertThat(input.toString(), contains("Enter your name:") != null);
     }
+}
 
     
 
