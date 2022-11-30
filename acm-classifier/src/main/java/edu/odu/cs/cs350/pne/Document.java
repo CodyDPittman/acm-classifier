@@ -94,7 +94,7 @@ public class Document extends Scores{
         	arr[i]=ss;
         	LOG.info("word: " + ss);//I have it printing right now, but I can have it output these strings pretty easily
         	
-        	docVocab.addWord(ss, 1);
+        	docVocab.docMapping(ss, 1);
         }
          // this above is my favorite one, cannot get it to work due to issues with imports of rog.apache.tika. I have no idea why it doesn't work.
         
