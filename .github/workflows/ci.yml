@@ -25,7 +25,7 @@ jobs:
       working-directory: .
       run: |
         ./gradlew reportStats
-        ./gradlew spotbugsMain
+        ./gradlew check
         ./gradlew reports
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4.2.5
