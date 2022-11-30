@@ -17,7 +17,7 @@ spotbugsMain {
 spotbugsTest.enabled = false
 
 reportStats {
-    reportsURL = 'https://codydpittman.github.io/acm-classifier/'
+    reportsURL = 'https://codydpittman.github.io/acm-classifier/reports'
     htmlSourceDir = file('src/main/html')  // default value
     reportsDir = file('build/reports') // default value
     buildID = "12345"                  // defaults to current date, but can be any run identifier
@@ -100,8 +100,10 @@ task reports (type: Copy){
 	into 'build/reports/javadoc'
 	from 'src/main/html'
 	into 'build/reports'
+	from '../report_accumulator/build/reports'
+	into 'build/reports'
 	
-	dependsOn 'javadoc', 'test'
+	dependsOn 'javadoc', 'test', ':report_accumulator:reports'
 }
 
 task deployReports (type: Copy){
