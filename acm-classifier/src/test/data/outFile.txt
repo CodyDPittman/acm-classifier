@@ -1,0 +1,22 @@
+Data score: 0.9541222816301255
+Theory of Computation score: 0.9340242099707281
+
+Computer Applications score: 0.9373148402007778
+
+Data score: 0.9977617768022989
+
+Data score: 0.7928293322418928
+
+Computing and Methodologies score: 0.966766733927873
+
+Hardware score: 0.9271869849967481
+
+Data score: 0.8838430720484155
+Hardware score: 0.8702974598695213
+
+Mathematics of Computing score: 0.9359947443821911
+
+Computer Applications score: 0.8504270585600376
+
+Computing Milieux score: 0.9717855861203311
+
