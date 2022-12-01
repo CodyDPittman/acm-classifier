@@ -31,21 +31,21 @@ public class Document extends Scores{
     //private double genLit, hardware, compSysOrg, software, data, theoryComp, mathComp, infSys, compMeth, compApp, compMil;// the scores for each category.
     
 
-    public Vector<Integer> getRawSig() {
+    /*public Vector<Integer> getRawSig() {
         Map<String, Integer> rawSig = new HashMap<String, Integer>();
 
         for(Map.Entry<String, Integer> set : rawSig.entrySet()) {
             rawSignatures.add(set.getValue());
         }
 
-        /*Iterator<Entry<String, Integer>> new_iIterator = vocabMap.entrySet().iterator();
+        Iterator<Entry<String, Integer>> new_iIterator = vocabMap.entrySet().iterator();
 
         while(new_iIterator.hasNext()) {
             rawSignatures.add(new_iIterator.getValue());
-        }*/
+        }
 
         return rawSignatures;
-    }
+    }*/
     
     
     

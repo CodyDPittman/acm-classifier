@@ -49,4 +49,14 @@ Collection<String> collectiveVocab = new TreeSet<String>(Collator.getInstance())
 		collectiveVocab.add(word);
 		
 	}
+
+	Collection<Integer> values = vocabMap.values();
+	Vector<Integer> rawSignatures = new Vector<Integer>(values);
+	public Vector<Integer> getRawSig() {
+		for(Map.Entry<String, Integer> set : vocabMap.entrySet()) {
+			rawSignatures.add(set.getValue());
+		}
+
+    	return rawSignatures;
+	}
 }
