@@ -1,25 +1,26 @@
-Computing Milieux score: 0.9230880482308749
+Information Systems score: 0.9318408203444073
 
-Information Systems score: 0.8470644338011343
-Computer systems organization score: 0.8149671940959012
+Computer Applications score: 0.9633630498619487
+Mathematics of Computing score: 0.9419556239834059
+Computing Milieux score: 0.9278782729295346
 
-General Literature score: 0.9228052014800591
-Hardware score: 0.914977691698304
-Data score: 0.9089441783166956
+Data score: 0.9908645774686571
 
-General Literature score: 0.9710720151343537
+Computer systems organization score: 0.9418720262648663
+Information Systems score: 0.9282410715185283
 
-Data score: 0.8740757998806816
+Hardware score: 0.8933287200471947
+General Literature score: 0.8906256094609575
 
-Theory of Computation score: 0.9137662341274162
+Data score: 0.9336225713480815
+Software score: 0.8914668710375043
 
-Computing and Methodologies score: 0.788149064245253
+Data score: 0.9783552120840088
 
-Information Systems score: 0.9861708142141932
-Computing and Methodologies score: 0.9846420824808568
+Mathematics of Computing score: 0.9953461290106785
 
-Mathematics of Computing score: 0.8896158129924233
+Hardware score: 0.7832496308751143
+Information Systems score: 0.7486081595722786
 
-Computing and Methodologies score: 0.9510871286419897
-Computer Applications score: 0.9385679003147777
+Theory of Computation score: 0.9661530311781357
 

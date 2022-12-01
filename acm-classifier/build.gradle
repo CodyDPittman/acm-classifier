@@ -3,6 +3,7 @@ plugins{
 	id "com.github.spotbugs" version "5.0.6"
 	id 'edu.odu.cs.report_accumulator' version '1.4'
 	id 'project-report'
+	id 'jacoco'
 }
 
 spotbugsMain {
@@ -17,6 +18,7 @@ spotbugsMain {
 
 spotbugsTest.enabled = false
 check.dependsOn htmlDependencyReport
+check.dependsOn jacocoTestReport
 
 reportStats {
     reportsURL = 'https://codydpittman.github.io/acm-classifier'
