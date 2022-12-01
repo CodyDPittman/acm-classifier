@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Document.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">acm-classifier</a> &gt; <a href="index.source.html" class="el_package">edu.odu.cs.cs350.pne</a> &gt; <span class="el_source">Document.java</span></div><h1>Document.java</h1><pre class="source lang-java linenums">package edu.odu.cs.cs350.pne;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.PrintWriter;
+import java.util.Vector;
+import java.util.HashMap;
+import java.util.Map;
+import org.apache.tika.metadata.Metadata;  
+import org.apache.tika.sax.BodyContentHandler;  
+import org.apache.tika.parser.pdf.PDFParser;  
+import org.apache.tika.parser.ParseContext;  
+
+import java.util.logging.Logger;
+
+public class Document extends Scores{
+    public Vector&lt;Integer&gt; rawSignatures;
+<span class="pc" id="L20">    String signatureFile = (&quot;rawSignatures.txt&quot;);</span>
+<span class="pc" id="L21">    Vocabulary docVocab = new Vocabulary();</span>
+    
+
+<span class="fc" id="L24">    public Document() {</span>
+
+<span class="fc" id="L26">    }</span>
+
+<span class="nc" id="L28">    public Document(String signatureFile) {</span>
+
+<span class="nc" id="L30">    }</span>
+    //private double genLit, hardware, compSysOrg, software, data, theoryComp, mathComp, infSys, compMeth, compApp, compMil;// the scores for each category.
+    
+
+    public Vector&lt;Integer&gt; getRawSig() {
+<span class="fc" id="L35">        Map&lt;String, Integer&gt; rawSig = new HashMap&lt;String, Integer&gt;();</span>
+
+<span class="pc bpc" id="L37" title="1 of 2 branches missed.">        for(Map.Entry&lt;String, Integer&gt; set : rawSig.entrySet()) {</span>
+<span class="nc" id="L38">            rawSignatures.add(set.getValue());</span>
+<span class="nc" id="L39">        }</span>
+
+        /*Iterator&lt;Entry&lt;String, Integer&gt;&gt; new_iIterator = vocabMap.entrySet().iterator();
+
+        while(new_iIterator.hasNext()) {
+            rawSignatures.add(new_iIterator.getValue());
+        }*/
+
+<span class="fc" id="L47">        return rawSignatures;</span>
+    }
+    
+    
+    
+    
+    //Pdf reader
+<span class="fc" id="L54">    private static final Logger LOG = Logger.getLogger(Document.class.getName());</span>
+	
+	public String[] readPDFInput(String argsv) throws Exception  
+	{  
+		//Creating an object of the BodyContentHandler class  
+<span class="fc" id="L59">		BodyContentHandler cHandler = new BodyContentHandler();  </span>
+		//Creating a file object  
+<span class="fc" id="L61">		File infile = new File(argsv);  </span>
+		//Create a FileInputStream object on  
+		//the path specified using the created file object file  
+<span class="fc" id="L64">		FileInputStream input = new FileInputStream(infile);  </span>
+		//Creating an object of the type Metadata  
+<span class="fc" id="L66">		Metadata mData = new Metadata();  </span>
+		//Creating an object of the ParseContext class  
+<span class="fc" id="L68">		ParseContext pContext = new ParseContext();  </span>
+		//creating an object of the class PDFParser  
+<span class="fc" id="L70">		PDFParser parser = new PDFParser();  </span>
+		//calling the parse() method using the   
+		//object of the PDFParser class  
+<span class="fc" id="L73">		parser.parse(input, cHandler, mData, pContext);  </span>
+		//Displaying the contents   
+		//of the pdf file by invoking the toString() method  
+<span class="fc" id="L76">		String text = cHandler.toString();  </span>
+		//LOG.info(&quot;Extracting the contents from the file: \n&quot; + cHandler.toString());  
+		
+<span class="fc" id="L79">		text=text.trim();</span>
+<span class="fc" id="L80">		text = text.replace(&quot;,&quot;, &quot;&quot;);</span>
+<span class="fc" id="L81">		text = text.replace(&quot;.&quot;, &quot;&quot;);</span>
+<span class="fc" id="L82">		text = text.replace(&quot;!&quot;, &quot;&quot;);</span>
+<span class="fc" id="L83">		text = text.replace(&quot;?&quot;, &quot;&quot;);</span>
+<span class="fc" id="L84">		text = text.replace(&quot;:&quot;, &quot;&quot;);</span>
+<span class="fc" id="L85">		text = text.replace(&quot;-&quot;, &quot; &quot;);</span>
+<span class="fc" id="L86">		text = text.replace(&quot;&amp;&quot;, &quot; and &quot;);//replacing bad characters</span>
+		
+		
+		
+<span class="fc" id="L90">		String[] arr = text.split(&quot; &quot;);</span>
+		String ss;
+<span class="fc" id="L92">		LOG.info(&quot;arr length: &quot; + arr.length);</span>
+<span class="fc bfc" id="L93" title="All 2 branches covered.">        for (int i=0; i&lt;arr.length; i++ ) {</span>
+<span class="fc" id="L94">        	ss= arr[i].trim();</span>
+<span class="fc" id="L95">        	ss=ss.toLowerCase();</span>
+<span class="fc" id="L96">        	arr[i]=ss;</span>
+<span class="fc" id="L97">        	LOG.info(&quot;word: &quot; + ss);//I have it printing right now, but I can have it output these strings pretty easily</span>
+        	
+<span class="fc" id="L99">        	docVocab.docMapping(ss, 1);</span>
+        }
+         // this above is my favorite one, cannot get it to work due to issues with imports of rog.apache.tika. I have no idea why it doesn't work.
+        
+        //splitting the text into individual words
+        
+        
+<span class="fc" id="L106">        return arr;</span>
+	}
+	
+
+	//Producing a report, uses random scores right now 
+	
+	public String listingReport() //inputs will really be a document class type
+	{  
+<span class="fc" id="L114">		Scores emptyScore0 =new Scores();</span>
+<span class="fc" id="L115">		Scores emptyScore1 =new Scores();</span>
+<span class="fc" id="L116">		Scores emptyScore2 =new Scores();</span>
+<span class="fc" id="L117">		Scores emptyScore3 =new Scores();</span>
+<span class="fc" id="L118">		Scores emptyScore4 =new Scores();</span>
+<span class="fc" id="L119">		Scores emptyScore5 =new Scores();</span>
+<span class="fc" id="L120">		Scores emptyScore6 =new Scores();</span>
+<span class="fc" id="L121">		Scores emptyScore7 =new Scores();</span>
+<span class="fc" id="L122">		Scores emptyScore8 =new Scores();</span>
+<span class="fc" id="L123">		Scores emptyScore9 =new Scores();</span>
+<span class="fc" id="L124">		Scores emptyScore10 =new Scores();</span>
+		
+<span class="fc" id="L126">		Scores[] reportScores = new Scores[11];</span>
+<span class="fc" id="L127">		reportScores[0] = emptyScore0;</span>
+<span class="fc" id="L128">		reportScores[1] = emptyScore1;</span>
+<span class="fc" id="L129">		reportScores[2] = emptyScore2;</span>
+<span class="fc" id="L130">		reportScores[3] = emptyScore3;</span>
+<span class="fc" id="L131">		reportScores[4] = emptyScore4;</span>
+<span class="fc" id="L132">		reportScores[5] = emptyScore5;</span>
+<span class="fc" id="L133">		reportScores[6] = emptyScore6;</span>
+<span class="fc" id="L134">		reportScores[7] = emptyScore7;</span>
+<span class="fc" id="L135">		reportScores[8] = emptyScore8;</span>
+<span class="fc" id="L136">		reportScores[9] = emptyScore9;</span>
+<span class="fc" id="L137">		reportScores[10] = emptyScore10;</span>
+		
+		
+<span class="fc" id="L140">		String test = &quot;&quot;+reportScores.length;</span>
+<span class="fc" id="L141">		LOG.info(test);</span>
+<span class="fc bfc" id="L142" title="All 2 branches covered.">		for (int k=0;k&lt;reportScores.length; k++)</span>
+		{
+			//reportScores[k].classification = &quot;none&quot;;
+			//reportScores[k].score =0; 
+<span class="fc" id="L146">			reportScores[k].setClassification(k);</span>
+<span class="fc" id="L147">			reportScores[k].setScore(Math.random());</span>
+		}
+		
+		//the above is primarily to generate the data, will be removed for final version
+		
+<span class="fc bfc" id="L152" title="All 2 branches covered.">		for (int i = 0; i &lt; reportScores.length; i++) {</span>
+			 
+            // Inner nested loop pointing 1 index ahead
+<span class="fc bfc" id="L155" title="All 2 branches covered.">            for (int j = i + 1; j &lt; reportScores.length; j++) {</span>
+ 
+                // Checking elements
+                Scores temp;
+<span class="fc bfc" id="L159" title="All 2 branches covered.">                if (reportScores[j].getScore() &gt;= reportScores[i].getScore()) {</span>
+ 
+                    // Swapping
+<span class="fc" id="L162">                    temp = reportScores[i];</span>
+<span class="fc" id="L163">                    reportScores[i] = reportScores[j];</span>
+<span class="fc" id="L164">                    reportScores[j] = temp;</span>
+                }
+            }
+		}
+            
+		
+<span class="fc" id="L170">		int x=1;</span>
+<span class="fc bfc" id="L171" title="All 2 branches covered.">		for (int m=1; m&lt;reportScores.length;m++)</span>
+		{
+<span class="fc bfc" id="L173" title="All 2 branches covered.">			if (reportScores[m].getScore()&gt;reportScores[0].getScore()-(reportScores[0].getScore()*.05))</span>
+			{
+<span class="fc" id="L175">				x++;</span>
+			}
+		}
+		
+<span class="fc" id="L179">		String reportData=&quot;&quot;;</span>
+		
+<span class="fc bfc" id="L181" title="All 2 branches covered.">		for(int l=0; l&lt;x; l++)</span>
+		{
+<span class="fc" id="L183">			reportData = reportData + reportScores[l].getClassification() + &quot; score: &quot; + reportScores[l].getScore()+&quot;\n&quot;;</span>
+		}
+<span class="fc" id="L185">		LOG.info(reportData);</span>
+<span class="fc" id="L186">		return reportData;</span>
+	}
+	
+	public void MultiplelistingReport(int docs) throws Exception //inputs will really be document class types ex: Document Arr[]
+	{
+<span class="fc" id="L191">		File outFile = new File(&quot;src/test/data/outFile.txt&quot;);</span>
+<span class="fc" id="L192">		PrintWriter DataOut = new PrintWriter(outFile);</span>
+		
+<span class="fc bfc" id="L194" title="All 2 branches covered.">		for (int i=0; i&lt; docs; i++)</span>
+		{
+<span class="fc" id="L196">			DataOut.print(this.listingReport());</span>
+<span class="fc" id="L197">			DataOut.print(&quot;\n&quot;);</span>
+		}
+<span class="fc" id="L199">		DataOut.close();</span>
+<span class="fc" id="L200">	}</span>
+
+	//This is where the AsciiInput function will be called
+	private static final String FileName = &quot;C:\\Users\\alber\\OneDrive\\Desktop\\acmClassifier\\acm-classifier\\acm-classifier\\src\\main\\java\\edu\\odu\\cs\\cs350\\pne\\asciinput.txt&quot;;
+	//params of main function will change based on the other parameters used in the other functions
+	//This will be accomplished by using function overloading.
+	
+	public String addFile(String filename) {
+<span class="fc" id="L208">        return FileName;</span>
+    }
+	public  void readAsciiText(String[] args){
+		//used the try catch structure to prevent resource leak
+<span class="nc" id="L212">		try(BufferedReader br = new BufferedReader(new FileReader(FileName));) {</span>
+			String currentLine;
+<span class="nc bnc" id="L214" title="All 2 branches missed.">			while((currentLine = br.readLine()) != null){</span>
+<span class="nc" id="L215">				System.out.println(currentLine);</span>
+			}
+<span class="nc" id="L217">		} catch (Exception e) {</span>
+<span class="nc" id="L218">			e.printStackTrace();</span>
+			// TODO: handle exception
+<span class="nc" id="L220">		}</span>
+
+<span class="nc" id="L222">	}</span>
+}
+    
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
