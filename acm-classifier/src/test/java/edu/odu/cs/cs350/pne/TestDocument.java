@@ -11,7 +11,7 @@ import java.io.FileReader;
 import java.io.InputStreamReader;
 
 public class TestDocument {
-    @Test
+    /*@Test
     public void testRawSig() {
         Document doc = new Document();
 
@@ -23,10 +23,10 @@ public class TestDocument {
 
         doc.getRawSig();
 
-        //assertEquals(doc.rawSignatures.get(0), 2);
-        //assertEquals(doc.rawSignatures.get(1), 1);
-        //assertEquals(doc.rawSignatures.get(2), 2);
-    }
+        assertEquals(doc.rawSignatures.get(0), 2);
+        assertEquals(doc.rawSignatures.get(1), 1);
+        assertEquals(doc.rawSignatures.get(2), 2);
+    }*/
 
     private static final String FileName = "C:\\Users\\alber\\OneDrive\\Desktop\\acmClassifier\\acm-classifier\\acm-classifier\\src\\main\\java\\edu\\odu\\cs\\cs350\\pne\\asciinput.txt";
 

@@ -46,6 +46,23 @@ public void testaddWord() {
 	
 }
 
+@Test
+public void testGetRawSig() {
+	Vocabulary vocab = new Vocabulary();
+
+	vocab.docMapping("computer", 1);
+	vocab.docMapping("computer", 1);
+	vocab.docMapping("science", 1);
+	vocab.docMapping("text", 1);
+	vocab.docMapping("text", 1);
+
+	vocab.getRawSig();
+
+	assertEquals(vocab.rawSignatures.get(0), 2);
+	assertEquals(vocab.rawSignatures.get(1), 1);
+	assertEquals(vocab.rawSignatures.get(2), 2);
+}
+
 	
 	
 }
