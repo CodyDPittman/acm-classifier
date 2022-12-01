@@ -16,6 +16,7 @@ spotbugsMain {
 }
 
 spotbugsTest.enabled = false
+check.dependsOn htmlDependencyReport
 
 reportStats {
     reportsURL = 'https://codydpittman.github.io/acm-classifier'
