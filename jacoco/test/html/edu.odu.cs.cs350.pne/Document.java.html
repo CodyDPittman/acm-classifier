@@ -89,21 +89,20 @@ public class Document extends Scores{
 		
 <span class="fc" id="L90">		String[] arr = text.split(&quot; &quot;);</span>
 		String ss;
-<span class="fc" id="L92">		LOG.info(&quot;arr length: &quot; + arr.length);</span>
+		//LOG.info(&quot;arr length: &quot; + arr.length);
 <span class="fc bfc" id="L93" title="All 2 branches covered.">        for (int i=0; i&lt;arr.length; i++ ) {</span>
 <span class="fc" id="L94">        	ss= arr[i].trim();</span>
 <span class="fc" id="L95">        	ss=ss.toLowerCase();</span>
 <span class="fc" id="L96">        	arr[i]=ss;</span>
-<span class="fc" id="L97">        	LOG.info(&quot;word: &quot; + ss);//I have it printing right now, but I can have it output these strings pretty easily</span>
+        	//LOG.info(&quot;word: &quot; + ss);//I have it printing right now, but I can have it output these strings pretty easily
         	
 <span class="fc" id="L99">        	docVocab.docMapping(ss, 1);</span>
         }
-         // this above is my favorite one, cannot get it to work due to issues with imports of rog.apache.tika. I have no idea why it doesn't work.
-        
+                 
         //splitting the text into individual words
         
         
-<span class="fc" id="L106">        return arr;</span>
+<span class="fc" id="L105">        return arr;</span>
 	}
 	
 
@@ -111,93 +110,93 @@ public class Document extends Scores{
 	
 	public String listingReport() //inputs will really be a document class type
 	{  
-<span class="fc" id="L114">		Scores emptyScore0 =new Scores();</span>
-<span class="fc" id="L115">		Scores emptyScore1 =new Scores();</span>
-<span class="fc" id="L116">		Scores emptyScore2 =new Scores();</span>
-<span class="fc" id="L117">		Scores emptyScore3 =new Scores();</span>
-<span class="fc" id="L118">		Scores emptyScore4 =new Scores();</span>
-<span class="fc" id="L119">		Scores emptyScore5 =new Scores();</span>
-<span class="fc" id="L120">		Scores emptyScore6 =new Scores();</span>
-<span class="fc" id="L121">		Scores emptyScore7 =new Scores();</span>
-<span class="fc" id="L122">		Scores emptyScore8 =new Scores();</span>
-<span class="fc" id="L123">		Scores emptyScore9 =new Scores();</span>
-<span class="fc" id="L124">		Scores emptyScore10 =new Scores();</span>
+<span class="fc" id="L113">		Scores emptyScore0 =new Scores();</span>
+<span class="fc" id="L114">		Scores emptyScore1 =new Scores();</span>
+<span class="fc" id="L115">		Scores emptyScore2 =new Scores();</span>
+<span class="fc" id="L116">		Scores emptyScore3 =new Scores();</span>
+<span class="fc" id="L117">		Scores emptyScore4 =new Scores();</span>
+<span class="fc" id="L118">		Scores emptyScore5 =new Scores();</span>
+<span class="fc" id="L119">		Scores emptyScore6 =new Scores();</span>
+<span class="fc" id="L120">		Scores emptyScore7 =new Scores();</span>
+<span class="fc" id="L121">		Scores emptyScore8 =new Scores();</span>
+<span class="fc" id="L122">		Scores emptyScore9 =new Scores();</span>
+<span class="fc" id="L123">		Scores emptyScore10 =new Scores();</span>
 		
-<span class="fc" id="L126">		Scores[] reportScores = new Scores[11];</span>
-<span class="fc" id="L127">		reportScores[0] = emptyScore0;</span>
-<span class="fc" id="L128">		reportScores[1] = emptyScore1;</span>
-<span class="fc" id="L129">		reportScores[2] = emptyScore2;</span>
-<span class="fc" id="L130">		reportScores[3] = emptyScore3;</span>
-<span class="fc" id="L131">		reportScores[4] = emptyScore4;</span>
-<span class="fc" id="L132">		reportScores[5] = emptyScore5;</span>
-<span class="fc" id="L133">		reportScores[6] = emptyScore6;</span>
-<span class="fc" id="L134">		reportScores[7] = emptyScore7;</span>
-<span class="fc" id="L135">		reportScores[8] = emptyScore8;</span>
-<span class="fc" id="L136">		reportScores[9] = emptyScore9;</span>
-<span class="fc" id="L137">		reportScores[10] = emptyScore10;</span>
+<span class="fc" id="L125">		Scores[] reportScores = new Scores[11];</span>
+<span class="fc" id="L126">		reportScores[0] = emptyScore0;</span>
+<span class="fc" id="L127">		reportScores[1] = emptyScore1;</span>
+<span class="fc" id="L128">		reportScores[2] = emptyScore2;</span>
+<span class="fc" id="L129">		reportScores[3] = emptyScore3;</span>
+<span class="fc" id="L130">		reportScores[4] = emptyScore4;</span>
+<span class="fc" id="L131">		reportScores[5] = emptyScore5;</span>
+<span class="fc" id="L132">		reportScores[6] = emptyScore6;</span>
+<span class="fc" id="L133">		reportScores[7] = emptyScore7;</span>
+<span class="fc" id="L134">		reportScores[8] = emptyScore8;</span>
+<span class="fc" id="L135">		reportScores[9] = emptyScore9;</span>
+<span class="fc" id="L136">		reportScores[10] = emptyScore10;</span>
 		
 		
-<span class="fc" id="L140">		String test = &quot;&quot;+reportScores.length;</span>
-<span class="fc" id="L141">		LOG.info(test);</span>
-<span class="fc bfc" id="L142" title="All 2 branches covered.">		for (int k=0;k&lt;reportScores.length; k++)</span>
+		//String test = &quot;&quot;+reportScores.length;
+		//LOG.info(test);
+<span class="fc bfc" id="L141" title="All 2 branches covered.">		for (int k=0;k&lt;reportScores.length; k++)</span>
 		{
 			//reportScores[k].classification = &quot;none&quot;;
 			//reportScores[k].score =0; 
-<span class="fc" id="L146">			reportScores[k].setClassification(k);</span>
-<span class="fc" id="L147">			reportScores[k].setScore(Math.random());</span>
+<span class="fc" id="L145">			reportScores[k].setClassification(k);</span>
+<span class="fc" id="L146">			reportScores[k].setScore(Math.random());</span>
 		}
 		
 		//the above is primarily to generate the data, will be removed for final version
 		
-<span class="fc bfc" id="L152" title="All 2 branches covered.">		for (int i = 0; i &lt; reportScores.length; i++) {</span>
+<span class="fc bfc" id="L151" title="All 2 branches covered.">		for (int i = 0; i &lt; reportScores.length; i++) {</span>
 			 
             // Inner nested loop pointing 1 index ahead
-<span class="fc bfc" id="L155" title="All 2 branches covered.">            for (int j = i + 1; j &lt; reportScores.length; j++) {</span>
+<span class="fc bfc" id="L154" title="All 2 branches covered.">            for (int j = i + 1; j &lt; reportScores.length; j++) {</span>
  
                 // Checking elements
                 Scores temp;
-<span class="fc bfc" id="L159" title="All 2 branches covered.">                if (reportScores[j].getScore() &gt;= reportScores[i].getScore()) {</span>
+<span class="fc bfc" id="L158" title="All 2 branches covered.">                if (reportScores[j].getScore() &gt;= reportScores[i].getScore()) {</span>
  
                     // Swapping
-<span class="fc" id="L162">                    temp = reportScores[i];</span>
-<span class="fc" id="L163">                    reportScores[i] = reportScores[j];</span>
-<span class="fc" id="L164">                    reportScores[j] = temp;</span>
+<span class="fc" id="L161">                    temp = reportScores[i];</span>
+<span class="fc" id="L162">                    reportScores[i] = reportScores[j];</span>
+<span class="fc" id="L163">                    reportScores[j] = temp;</span>
                 }
             }
 		}
             
 		
-<span class="fc" id="L170">		int x=1;</span>
-<span class="fc bfc" id="L171" title="All 2 branches covered.">		for (int m=1; m&lt;reportScores.length;m++)</span>
+<span class="fc" id="L169">		int x=1;</span>
+<span class="fc bfc" id="L170" title="All 2 branches covered.">		for (int m=1; m&lt;reportScores.length;m++)</span>
 		{
-<span class="fc bfc" id="L173" title="All 2 branches covered.">			if (reportScores[m].getScore()&gt;reportScores[0].getScore()-(reportScores[0].getScore()*.05))</span>
+<span class="fc bfc" id="L172" title="All 2 branches covered.">			if (reportScores[m].getScore()&gt;reportScores[0].getScore()-(reportScores[0].getScore()*.05))</span>
 			{
-<span class="fc" id="L175">				x++;</span>
+<span class="fc" id="L174">				x++;</span>
 			}
 		}
 		
-<span class="fc" id="L179">		String reportData=&quot;&quot;;</span>
+<span class="fc" id="L178">		String reportData=&quot;&quot;;</span>
 		
-<span class="fc bfc" id="L181" title="All 2 branches covered.">		for(int l=0; l&lt;x; l++)</span>
+<span class="fc bfc" id="L180" title="All 2 branches covered.">		for(int l=0; l&lt;x; l++)</span>
 		{
-<span class="fc" id="L183">			reportData = reportData + reportScores[l].getClassification() + &quot; score: &quot; + reportScores[l].getScore()+&quot;\n&quot;;</span>
+<span class="fc" id="L182">			reportData = reportData + reportScores[l].getClassification() + &quot; score: &quot; + reportScores[l].getScore()+&quot;\n&quot;;</span>
 		}
-<span class="fc" id="L185">		LOG.info(reportData);</span>
-<span class="fc" id="L186">		return reportData;</span>
+<span class="fc" id="L184">		LOG.info(reportData);</span>
+<span class="fc" id="L185">		return reportData;</span>
 	}
 	
 	public void MultiplelistingReport(int docs) throws Exception //inputs will really be document class types ex: Document Arr[]
 	{
-<span class="fc" id="L191">		File outFile = new File(&quot;src/test/data/outFile.txt&quot;);</span>
-<span class="fc" id="L192">		PrintWriter DataOut = new PrintWriter(outFile);</span>
+<span class="fc" id="L190">		File outFile = new File(&quot;src/test/data/outFile.txt&quot;);</span>
+<span class="fc" id="L191">		PrintWriter DataOut = new PrintWriter(outFile);</span>
 		
-<span class="fc bfc" id="L194" title="All 2 branches covered.">		for (int i=0; i&lt; docs; i++)</span>
+<span class="fc bfc" id="L193" title="All 2 branches covered.">		for (int i=0; i&lt; docs; i++)</span>
 		{
-<span class="fc" id="L196">			DataOut.print(this.listingReport());</span>
-<span class="fc" id="L197">			DataOut.print(&quot;\n&quot;);</span>
+<span class="fc" id="L195">			DataOut.print(this.listingReport());</span>
+<span class="fc" id="L196">			DataOut.print(&quot;\n&quot;);</span>
 		}
-<span class="fc" id="L199">		DataOut.close();</span>
-<span class="fc" id="L200">	}</span>
+<span class="fc" id="L198">		DataOut.close();</span>
+<span class="fc" id="L199">	}</span>
 
 	//This is where the AsciiInput function will be called
 	private static final String FileName = &quot;C:\\Users\\alber\\OneDrive\\Desktop\\acmClassifier\\acm-classifier\\acm-classifier\\src\\main\\java\\edu\\odu\\cs\\cs350\\pne\\asciinput.txt&quot;;
@@ -205,21 +204,21 @@ public class Document extends Scores{
 	//This will be accomplished by using function overloading.
 	
 	public String addFile(String filename) {
-<span class="fc" id="L208">        return FileName;</span>
+<span class="fc" id="L207">        return FileName;</span>
     }
 	public  void readAsciiText(String[] args){
 		//used the try catch structure to prevent resource leak
-<span class="nc" id="L212">		try(BufferedReader br = new BufferedReader(new FileReader(FileName));) {</span>
+<span class="nc" id="L211">		try(BufferedReader br = new BufferedReader(new FileReader(FileName));) {</span>
 			String currentLine;
-<span class="nc bnc" id="L214" title="All 2 branches missed.">			while((currentLine = br.readLine()) != null){</span>
-<span class="nc" id="L215">				System.out.println(currentLine);</span>
+<span class="nc bnc" id="L213" title="All 2 branches missed.">			while((currentLine = br.readLine()) != null){</span>
+<span class="nc" id="L214">				System.out.println(currentLine);</span>
 			}
-<span class="nc" id="L217">		} catch (Exception e) {</span>
-<span class="nc" id="L218">			e.printStackTrace();</span>
+<span class="nc" id="L216">		} catch (Exception e) {</span>
+<span class="nc" id="L217">			e.printStackTrace();</span>
 			// TODO: handle exception
-<span class="nc" id="L220">		}</span>
+<span class="nc" id="L219">		}</span>
 
-<span class="nc" id="L222">	}</span>
+<span class="nc" id="L221">	}</span>
 }
     
 
