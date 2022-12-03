@@ -89,17 +89,16 @@ public class Document extends Scores{
 		
 		String[] arr = text.split(" ");
 		String ss;
-		LOG.info("arr length: " + arr.length);
+		//LOG.info("arr length: " + arr.length);
         for (int i=0; i<arr.length; i++ ) {
         	ss= arr[i].trim();
         	ss=ss.toLowerCase();
         	arr[i]=ss;
-        	LOG.info("word: " + ss);//I have it printing right now, but I can have it output these strings pretty easily
+        	//LOG.info("word: " + ss);//I have it printing right now, but I can have it output these strings pretty easily
         	
         	docVocab.docMapping(ss, 1);
         }
-         // this above is my favorite one, cannot get it to work due to issues with imports of rog.apache.tika. I have no idea why it doesn't work.
-        
+                 
         //splitting the text into individual words
         
         
@@ -137,8 +136,8 @@ public class Document extends Scores{
 		reportScores[10] = emptyScore10;
 		
 		
-		String test = ""+reportScores.length;
-		LOG.info(test);
+		//String test = ""+reportScores.length;
+		//LOG.info(test);
 		for (int k=0;k<reportScores.length; k++)
 		{
 			//reportScores[k].classification = "none";
