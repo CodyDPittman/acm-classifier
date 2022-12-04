@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -167,6 +167,11 @@ extends <a href="Scores.html" title="class in edu.odu.cs.cs350.pne">Scores</a></
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>java.util.Vector&lt;java.lang.Integer&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#normalizedSigs">normalizedSigs</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.util.Vector&lt;java.lang.Integer&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rawSignatures">rawSignatures</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -234,11 +239,16 @@ extends <a href="Scores.html" title="class in edu.odu.cs.cs350.pne">Scores</a></
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code>java.util.Vector&lt;java.lang.Integer&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#normalizeSignatures(java.util.Vector)">normalizeSignatures</a></span>&#8203;(java.util.Vector&lt;java.lang.Integer&gt;&nbsp;unNormalizedRawSigs)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readAsciiText(java.lang.String%5B%5D)">readAsciiText</a></span>&#8203;(java.lang.String[]&nbsp;args)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.lang.String[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readPDFInput(java.lang.String)">readPDFInput</a></span>&#8203;(java.lang.String&nbsp;argsv)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -284,10 +294,19 @@ extends <a href="Scores.html" title="class in edu.odu.cs.cs350.pne">Scores</a></
 <a id="rawSignatures">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>rawSignatures</h4>
 <pre>public&nbsp;java.util.Vector&lt;java.lang.Integer&gt; rawSignatures</pre>
+</li>
+</ul>
+<a id="normalizedSigs">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>normalizedSigs</h4>
+<pre>public&nbsp;java.util.Vector&lt;java.lang.Integer&gt; normalizedSigs</pre>
 </li>
 </ul>
 </li>
@@ -335,6 +354,15 @@ extends <a href="Scores.html" title="class in edu.odu.cs.cs350.pne">Scores</a></
 <li class="blockList">
 <h4>getRawSig</h4>
 <pre class="methodSignature">public&nbsp;java.util.Vector&lt;java.lang.Integer&gt;&nbsp;getRawSig()</pre>
+</li>
+</ul>
+<a id="normalizeSignatures(java.util.Vector)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>normalizeSignatures</h4>
+<pre class="methodSignature">public&nbsp;java.util.Vector&lt;java.lang.Integer&gt;&nbsp;normalizeSignatures&#8203;(java.util.Vector&lt;java.lang.Integer&gt;&nbsp;unNormalizedRawSigs)</pre>
 </li>
 </ul>
 <a id="readPDFInput(java.lang.String)">
