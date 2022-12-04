@@ -73,10 +73,19 @@ public class SystemTest{
     	String[] ark = input.readPDFInput(argsIn);
     	for (int j=0; j<arr.length;j++)
     	{
+    		input.docMapping(arr[j],1);
+    		input.addWord(arr[j]);
     		assertEquals(ark[j], arr[j]);
+    		
     	}
-        
+       
+    	assertEquals(input.vocabMap.get("you"), 9);
+    	assertEquals(input.vocabMap.get("finally"), 4);
+    	assertEquals(input.collectiveVocab.toArray()[0], "a");
     }
+    
+    
+    
 
 }
     
