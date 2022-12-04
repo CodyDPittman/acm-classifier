@@ -16,11 +16,13 @@ import org.apache.tika.parser.ParseContext;
 import java.util.logging.Logger;
 
 public class Document extends Scores{
-    public Vector<Integer> rawSignatures;
+    public Vector<Integer> rawSignatures = new Vector<Integer>();
+    public Vector<Integer> normalizedSigs = new Vector<Integer>();
     String signatureFile = ("rawSignatures.txt");
     Vocabulary docVocab = new Vocabulary();
     
-
+    
+    
     public Document() {
 
     }
@@ -31,6 +33,7 @@ public class Document extends Scores{
     //private double genLit, hardware, compSysOrg, software, data, theoryComp, mathComp, infSys, compMeth, compApp, compMil;// the scores for each category.
     
 
+    
     public Vector<Integer> getRawSig() {
         Map<String, Integer> rawSig = new HashMap<String, Integer>();
 
@@ -48,7 +51,18 @@ public class Document extends Scores{
     }
     
     
-    
+    public Vector<Integer> normalizeSignatures(Vector <Integer> unNormalizedRawSigs){
+    	
+    	for(int i = 0; i < unNormalizedRawSigs.size(); i++) {
+    		if(unNormalizedRawSigs.get(i) >= 5) {
+    			normalizedSigs.add(1);
+    		}
+    		else
+    			normalizedSigs.add(0);
+    	}
+    	
+    	return normalizedSigs;
+    }
     
     //Pdf reader
     private static final Logger LOG = Logger.getLogger(Document.class.getName());
