@@ -9,6 +9,7 @@ import static org.hamcrest.Matchers.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.InputStreamReader;
+import java.util.*;
 
 public class TestDocument {
     @Test
@@ -52,6 +53,19 @@ public class TestDocument {
         
     }
        
+    }
+    
+    @Test
+    public void testNormalization() {
+    	Document doc = new Document();
+    	doc.rawSignatures.add(1);
+    	doc.rawSignatures.add(6);
+    	doc.rawSignatures.add(5);
+    	doc.normalizeSignatures(doc.rawSignatures);
+    	assertEquals(doc.normalizedSigs.get(0), 0);
+    	assertEquals(doc.normalizedSigs.get(1), 1);
+    	assertEquals(doc.normalizedSigs.get(2), 1);
+    	
     }
 
 }
