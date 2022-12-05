@@ -10,6 +10,7 @@ import static org.hamcrest.Matchers.*;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Currency;
@@ -50,9 +51,17 @@ public class TestAsciiInput{
     }
 
     @Test
-    public void testReadTxt(){
+    public void testReadTxt() throws FileNotFoundException{
         AsciiInput read = new AsciiInput();
         read.ReadTxt();
+        try (Scanner keyboard = new Scanner(System.in)) {
+            String fileName = keyboard.nextLine();
+            assertEquals(keyboard.nextLine(), keyboard.nextLine());
+        }
+        AsciiInput notNull = new AsciiInput();
+        assertNotNull(notNull);
+        
+    
     }
 
 }

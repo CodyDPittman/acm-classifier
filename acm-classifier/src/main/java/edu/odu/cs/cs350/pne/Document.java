@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.Vector;
 import java.util.HashMap;
@@ -200,14 +202,14 @@ public class Document extends Scores{
 	}
 
 	//This is where the AsciiInput function will be called
-	private static final String FileName = "C:\\Users\\alber\\OneDrive\\Desktop\\acmClassifier\\acm-classifier\\acm-classifier\\src\\main\\java\\edu\\odu\\cs\\cs350\\pne\\asciinput.txt";
+	private static final File FileName = new File("src//test//data//");
 	//params of main function will change based on the other parameters used in the other functions
 	//This will be accomplished by using function overloading.
 	
-	public String addFile(String filename) {
+	public File addFile(String filename) {
         return FileName;
     }
-	public  void readAsciiText(String[] args){
+	public  void readAsciiText(String args){
 		//used the try catch structure to prevent resource leak
 		try(BufferedReader br = new BufferedReader(new FileReader(FileName));) {
 			String currentLine;

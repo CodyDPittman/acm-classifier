@@ -45,6 +45,7 @@ public class Librarian extends Document{
 		}
 		else if(fileType.equals(".txt"))
 		{
+			thisDoc.readAsciiText(fileLoc);
 			//for the ascii reader
 		}
 		docs.add(thisDoc);
