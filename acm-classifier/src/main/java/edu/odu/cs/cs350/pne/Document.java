@@ -6,8 +6,8 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.Vector;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.Collection;
 import org.apache.tika.metadata.Metadata;  
 import org.apache.tika.sax.BodyContentHandler;  
 import org.apache.tika.parser.pdf.PDFParser;  
@@ -16,7 +16,8 @@ import org.apache.tika.parser.ParseContext;
 import java.util.logging.Logger;
 
 public class Document extends Scores{
-    public Vector<Integer> rawSignatures;
+	public Collection<Integer> values = vocabMap.values();
+    public Vector<Integer> rawSignatures = new Vector<>(values);
     String signatureFile = ("rawSignatures.txt");
     Vocabulary docVocab = new Vocabulary();
     
@@ -31,21 +32,13 @@ public class Document extends Scores{
     //private double genLit, hardware, compSysOrg, software, data, theoryComp, mathComp, infSys, compMeth, compApp, compMil;// the scores for each category.
     
 
-    /*public Vector<Integer> getRawSig() {
-        Map<String, Integer> rawSig = new HashMap<String, Integer>();
-
-        for(Map.Entry<String, Integer> set : rawSig.entrySet()) {
+    public Vector<Integer> getRawSig() {
+        for(Map.Entry<String, Integer> set : vocabMap.entrySet()) {
             rawSignatures.add(set.getValue());
         }
 
-        Iterator<Entry<String, Integer>> new_iIterator = vocabMap.entrySet().iterator();
-
-        while(new_iIterator.hasNext()) {
-            rawSignatures.add(new_iIterator.getValue());
-        }
-
         return rawSignatures;
-    }*/
+    }
     
     
     
