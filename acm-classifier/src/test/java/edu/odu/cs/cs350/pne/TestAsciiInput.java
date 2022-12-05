@@ -54,9 +54,9 @@ public class TestAsciiInput{
     }
 
     @Test
-    public void testReadTxt(String argsv) throws Exception{
+    public void testReadTxt() throws Exception{
         AsciiInput read = new AsciiInput();
-        read.ReadTxt(argsv);
+        AsciiInput.ReadTxt();
         try (Scanner keyboard = new Scanner(System.in)) {
             String fileName = keyboard.nextLine();
             assertEquals(keyboard.nextLine(), keyboard.nextLine());

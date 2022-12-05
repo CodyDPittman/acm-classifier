@@ -19,15 +19,15 @@ import org.apache.poi.ss.formula.functions.Replace;
 
 public class AsciiInput {
 
-    //private static final String FileName ="C:\\Users\\alber\\OneDrive\\Desktop\\acmClassifier\\acm-classifier\\acm-classifier\\src\\main\\java\\edu\\odu\\cs\\cs350\\pne\\asciinput.txt";
+    private static final String FileName ="C:\\Users\\alber\\OneDrive\\Desktop\\acmClassifier\\acm-classifier\\acm-classifier\\src\\main\\java\\edu\\odu\\cs\\cs350\\pne\\asciinput.txt";
 
     
     /*May use public Object addFile(String filename) if needed */
-    // public String addFile(String filename) {
-       // return FileName;
-   //  }
+     public String addFile(String filename) {
+        return FileName;
+    }
     
-    /*public static void main (String[] args) throws Exception {
+    public static void ReadTxt () throws Exception {
         try(BufferedReader br = new BufferedReader(new FileReader(FileName))) {
         String  currLine;
         while((currLine = br.readLine()) != null){
@@ -46,7 +46,7 @@ public class AsciiInput {
 
 
     
-}*/
+}
 
 /*public void ReadTxt() throws FileNotFoundException {
 Scanner keyboard = new Scanner(System.in);
@@ -59,7 +59,7 @@ while(inputFile.hasNext()){
 } */
 
 
-public String[] ReadTxt(String argsv) throws Exception{
+/*public String[] ReadTxt(String argsv) throws Exception{
 
     File file = new File(argsv);
     FileInputStream in = new FileInputStream(file);
@@ -85,12 +85,11 @@ public String[] ReadTxt(String argsv) throws Exception{
     
 
     
-    
+    /* */
+//}
+
 }
 
-public void addFile(String filename) {
-}
-}
 
 
 

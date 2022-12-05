@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -83,10 +85,25 @@ public class SystemTest{
     	assertEquals(input.vocabMap.get("finally"), 4);
     	assertEquals(input.collectiveVocab.toArray()[0], "a");
     }
+
+	private static final String FileName = "C:\\Users\\alber\\OneDrive\\Desktop\\acmClassifier\\acm-classifier\\acm-classifier\\src\\main\\java\\edu\\odu\\cs\\cs350\\pne\\example.txt";
+	@Test
+    public void testReadToFile(){
+    AsciiInput reader = new AsciiInput();
+    try(BufferedReader br = new BufferedReader(new FileReader(FileName))) {
+        
+    } catch (Exception e) {
+        String currLine;
+        e.printStackTrace();
+        assertFalse(false);
+        // TODO: handle exception
+        
+    }
     
     
     
 
+}
 }
     
     
