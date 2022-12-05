@@ -1,4 +1,5 @@
 package edu.odu.cs.cs350.pne;
+import org.hamcrest.Matcher;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -24,10 +25,12 @@ public class TestAsciiInput{
     public void testaddFile(){
         AsciiInput input = new AsciiInput();
         input.addFile(FileName);
-        assertThat(input.addFile(FileName), equalTo(FileName));
+       assertNotNull(input);
         
 
     }
+
+    
 
     @Test
     public void testReadToFile(){
@@ -51,9 +54,9 @@ public class TestAsciiInput{
     }
 
     @Test
-    public void testReadTxt() throws FileNotFoundException{
+    public void testReadTxt(String argsv) throws Exception{
         AsciiInput read = new AsciiInput();
-        read.ReadTxt();
+        read.ReadTxt(argsv);
         try (Scanner keyboard = new Scanner(System.in)) {
             String fileName = keyboard.nextLine();
             assertEquals(keyboard.nextLine(), keyboard.nextLine());

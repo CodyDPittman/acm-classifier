@@ -7,6 +7,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.InputStreamReader;
 
@@ -28,8 +29,7 @@ public class TestDocument {
         //assertEquals(doc.rawSignatures.get(2), 2);
     }
 
-    private static final String FileName = "C:\\Users\\alber\\OneDrive\\Desktop\\acmClassifier\\acm-classifier\\acm-classifier\\src\\main\\java\\edu\\odu\\cs\\cs350\\pne\\asciinput.txt";
-
+    private static final File FileName = new File("src//test//data//");
     @Test
     public void testaddFile(){
         Document input = new Document();

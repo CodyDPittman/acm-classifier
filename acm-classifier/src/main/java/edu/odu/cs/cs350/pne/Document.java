@@ -206,7 +206,7 @@ public class Document extends Scores{
 	//params of main function will change based on the other parameters used in the other functions
 	//This will be accomplished by using function overloading.
 	
-	public File addFile(String filename) {
+	public File addFile(File filename2) {
         return FileName;
     }
 	public  void readAsciiText(String args){

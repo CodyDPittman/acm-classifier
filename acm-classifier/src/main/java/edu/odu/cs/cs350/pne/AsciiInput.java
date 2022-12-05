@@ -87,6 +87,9 @@ public String[] ReadTxt(String argsv) throws Exception{
     
     
 }
+
+public void addFile(String filename) {
+}
 }
 
 
