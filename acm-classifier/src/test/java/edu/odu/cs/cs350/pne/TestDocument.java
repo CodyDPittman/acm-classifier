@@ -10,6 +10,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.InputStreamReader;
+import java.util.*;
 
 public class TestDocument {
     @Test
@@ -22,11 +23,11 @@ public class TestDocument {
         doc.docMapping("text", 1);
         doc.docMapping("text", 1);
 
-        doc.getRawSig();
+        doc.getRawSig();        
 
-        //assertEquals(doc.rawSignatures.get(0), 2);
-        //assertEquals(doc.rawSignatures.get(1), 1);
-        //assertEquals(doc.rawSignatures.get(2), 2);
+        assertEquals(doc.rawSignatures.get(0), 2);
+        assertEquals(doc.rawSignatures.get(1), 1);
+        assertEquals(doc.rawSignatures.get(2), 2);
     }
 
     private static final File FileName = new File("src//test//data//");
@@ -52,6 +53,19 @@ public class TestDocument {
         
     }
        
+    }
+    
+    @Test
+    public void testNormalization() {
+    	Document doc = new Document();
+    	doc.rawSignatures.add(1);
+    	doc.rawSignatures.add(6);
+    	doc.rawSignatures.add(5);
+    	doc.normalizeSignatures(doc.rawSignatures);
+    	assertEquals(doc.normalizedSigs.get(0), 0);
+    	assertEquals(doc.normalizedSigs.get(1), 1);
+    	assertEquals(doc.normalizedSigs.get(2), 1);
+    	
     }
 
 }

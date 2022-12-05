@@ -8,8 +8,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.Vector;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.Collection;
 import org.apache.tika.metadata.Metadata;  
 import org.apache.tika.sax.BodyContentHandler;  
 import org.apache.tika.parser.pdf.PDFParser;  
@@ -18,11 +18,14 @@ import org.apache.tika.parser.ParseContext;
 import java.util.logging.Logger;
 
 public class Document extends Scores{
-    public Vector<Integer> rawSignatures;
+	public Collection<Integer> values = vocabMap.values();
+    public Vector<Integer> rawSignatures = new Vector<>(values);
+    public Vector<Integer> normalizedSigs = new Vector<Integer>();
     String signatureFile = ("rawSignatures.txt");
     Vocabulary docVocab = new Vocabulary();
     
-
+    
+    
     public Document() {
 
     }
@@ -33,24 +36,28 @@ public class Document extends Scores{
     //private double genLit, hardware, compSysOrg, software, data, theoryComp, mathComp, infSys, compMeth, compApp, compMil;// the scores for each category.
     
 
+    
     public Vector<Integer> getRawSig() {
-        Map<String, Integer> rawSig = new HashMap<String, Integer>();
-
-        for(Map.Entry<String, Integer> set : rawSig.entrySet()) {
+        for(Map.Entry<String, Integer> set : vocabMap.entrySet()) {
             rawSignatures.add(set.getValue());
         }
-
-        /*Iterator<Entry<String, Integer>> new_iIterator = vocabMap.entrySet().iterator();
-
-        while(new_iIterator.hasNext()) {
-            rawSignatures.add(new_iIterator.getValue());
-        }*/
 
         return rawSignatures;
     }
     
     
-    
+    public Vector<Integer> normalizeSignatures(Vector <Integer> unNormalizedRawSigs){
+    	
+    	for(int i = 0; i < unNormalizedRawSigs.size(); i++) {
+    		if(unNormalizedRawSigs.get(i) >= 5) {
+    			normalizedSigs.add(1);
+    		}
+    		else
+    			normalizedSigs.add(0);
+    	}
+    	
+    	return normalizedSigs;
+    }
     
     //Pdf reader
     private static final Logger LOG = Logger.getLogger(Document.class.getName());
@@ -91,17 +98,16 @@ public class Document extends Scores{
 		
 		String[] arr = text.split(" ");
 		String ss;
-		LOG.info("arr length: " + arr.length);
+		//LOG.info("arr length: " + arr.length);
         for (int i=0; i<arr.length; i++ ) {
         	ss= arr[i].trim();
         	ss=ss.toLowerCase();
         	arr[i]=ss;
-        	LOG.info("word: " + ss);//I have it printing right now, but I can have it output these strings pretty easily
+        	//LOG.info("word: " + ss);//I have it printing right now, but I can have it output these strings pretty easily
         	
         	docVocab.docMapping(ss, 1);
         }
-         // this above is my favorite one, cannot get it to work due to issues with imports of rog.apache.tika. I have no idea why it doesn't work.
-        
+                 
         //splitting the text into individual words
         
         
@@ -139,8 +145,8 @@ public class Document extends Scores{
 		reportScores[10] = emptyScore10;
 		
 		
-		String test = ""+reportScores.length;
-		LOG.info(test);
+		//String test = ""+reportScores.length;
+		//LOG.info(test);
 		for (int k=0;k<reportScores.length; k++)
 		{
 			//reportScores[k].classification = "none";

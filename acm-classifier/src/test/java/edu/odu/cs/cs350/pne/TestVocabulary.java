@@ -44,8 +44,5 @@ public void testaddWord() {
 	assertEquals(vocab.collectiveVocab.toArray()[1], "computer");
 	assertEquals(vocab.collectiveVocab.toArray()[2], "program");
 	
-}
-
-	
-	
+}	
 }
