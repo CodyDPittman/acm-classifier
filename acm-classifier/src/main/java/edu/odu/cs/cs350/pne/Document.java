@@ -206,7 +206,7 @@ public class Document extends Scores{
 		}
 		DataOut.close();
 	}
-
+ 
 	//This is where the AsciiInput function will be called
 	private static final File FileName = new File("src//test//data//");
 	//params of main function will change based on the other parameters used in the other functions
