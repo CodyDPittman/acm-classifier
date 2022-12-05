@@ -45,26 +45,27 @@ import java.util.logging.Logger;
 		}
 <span class="nc bnc" id="L46" title="All 2 branches missed.">		else if(fileType.equals(&quot;.txt&quot;))</span>
 		{
+<span class="nc" id="L48">			thisDoc.readAsciiText(fileLoc);</span>
 			//for the ascii reader
 		}
-<span class="nc" id="L50">		docs.add(thisDoc);</span>
+<span class="nc" id="L51">		docs.add(thisDoc);</span>
 		
 		//counting++;
-<span class="nc" id="L53">		}</span>
+<span class="nc" id="L54">		}</span>
 		String reportLine;
-<span class="nc" id="L55">		File outFile = new File(&quot;C:/Users/admir/git/acm-classifier/acm-classifier/src/test/data/outFile.txt&quot;);</span>
-<span class="nc" id="L56">		PrintWriter DataOut = new PrintWriter(outFile);</span>
-<span class="nc bnc" id="L57" title="All 2 branches missed.">		for(int j=0; j&lt;docs.size();j++)</span>
+<span class="nc" id="L56">		File outFile = new File(&quot;C:/Users/admir/git/acm-classifier/acm-classifier/src/test/data/outFile.txt&quot;);</span>
+<span class="nc" id="L57">		PrintWriter DataOut = new PrintWriter(outFile);</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">		for(int j=0; j&lt;docs.size();j++)</span>
 		{
-<span class="nc" id="L59">			reportLine= docs.elementAt(j).listingReport();</span>
+<span class="nc" id="L60">			reportLine= docs.elementAt(j).listingReport();</span>
 			
 			
-<span class="nc" id="L62">				DataOut.print(reportLine);</span>
-<span class="nc" id="L63">				DataOut.print(&quot;\n&quot;);</span>
+<span class="nc" id="L63">				DataOut.print(reportLine);</span>
+<span class="nc" id="L64">				DataOut.print(&quot;\n&quot;);</span>
 
 		}
-<span class="nc" id="L66">		DataOut.close();</span>
-<span class="nc" id="L67">	}</span>
+<span class="nc" id="L67">		DataOut.close();</span>
+<span class="nc" id="L68">	}</span>
 
 
 

@@ -85,7 +85,7 @@
          <br/>
       </p>
       <h2>Metrics</h2>
-      <p>225 lines of code analyzed,
+      <p>227 lines of code analyzed,
 	in 5 classes, 
 	in 1 packages.</p>
       <table width="500" cellpadding="5" cellspacing="2">
@@ -97,12 +97,12 @@
          <tr class="tablerow0">
             <td>High Priority Warnings</td>
             <td align="right">5</td>
-            <td align="right">22.22</td>
+            <td align="right">22.03</td>
          </tr>
          <tr class="tablerow1">
             <td>Medium Priority Warnings</td>
             <td align="right">7</td>
-            <td align="right">31.11</td>
+            <td align="right">30.84</td>
          </tr>
          <tr class="$totalClass">
             <td>
@@ -112,7 +112,7 @@
                <b>12</b>
             </td>
             <td align="right">
-               <b>53.33</b>
+               <b>52.86</b>
             </td>
          </tr>
       </table>
@@ -151,7 +151,7 @@
             <td>
                <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
             </td>
-            <td align="right">1</td>
+            <td align="right">2</td>
          </tr>
          <tr class="tablerow1">
             <td>
@@ -169,7 +169,7 @@
             <td>
                <a href="#Warnings_STYLE">Dodgy code Warnings</a>
             </td>
-            <td align="right">5</td>
+            <td align="right">4</td>
          </tr>
          <tr class="tablerow0">
             <td>
@@ -190,18 +190,32 @@
             <th align="left">Code</th>
             <th align="left">Warning</th>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d1e174');">
+         <tr class="tablerow1" onclick="toggleRow('d1e130');">
+            <td>
+               <span class="priority-2">Nm</span>
+            </td>
+            <td>The method name edu.odu.cs.cs350.pne.AsciiInput.ReadTxt() doesn't start with a lower case letter</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e130" style="display: none;">
+                  <a href="#NM_METHOD_NAMING_CONVENTION">Bug type NM_METHOD_NAMING_CONVENTION (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.pne.AsciiInput<br/>In method edu.odu.cs.cs350.pne.AsciiInput.ReadTxt()<br/>At AsciiInput.java:[lines 31-49]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e172');">
             <td>
                <span class="priority-2">Nm</span>
             </td>
             <td>The method name edu.odu.cs.cs350.pne.Document.MultiplelistingReport(int) doesn't start with a lower case letter</td>
          </tr>
-         <tr class="detailrow1">
+         <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d1e174" style="display: none;">
+               <p id="d1e172" style="display: none;">
                   <a href="#NM_METHOD_NAMING_CONVENTION">Bug type NM_METHOD_NAMING_CONVENTION (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.pne.Document<br/>In method edu.odu.cs.cs350.pne.Document.MultiplelistingReport(int)<br/>At Document.java:[lines 197-206]</p>
+                  <br/>In class edu.odu.cs.cs350.pne.Document<br/>In method edu.odu.cs.cs350.pne.Document.MultiplelistingReport(int)<br/>At Document.java:[lines 199-208]</p>
             </td>
          </tr>
       </table>
@@ -213,7 +227,7 @@
             <th align="left">Code</th>
             <th align="left">Warning</th>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d1e186');">
+         <tr class="tablerow1" onclick="toggleRow('d1e184');">
             <td>
                <span class="priority-2">OBL</span>
             </td>
@@ -222,9 +236,9 @@
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d1e186" style="display: none;">
+               <p id="d1e184" style="display: none;">
                   <a href="#OBL_UNSATISFIED_OBLIGATION">Bug type OBL_UNSATISFIED_OBLIGATION (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.pne.Document<br/>In method edu.odu.cs.cs350.pne.Document.readPDFInput(String)<br/>Reference type java.io.InputStream<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at Document.java:[line 71] is not discharged<br/>Path continues at Document.java:[line 73]<br/>Path continues at Document.java:[line 75]<br/>Path continues at Document.java:[line 77]<br/>Path continues at Document.java:[line 80]<br/>Path continues at Document.java:[line 83]<br/>Path continues at Document.java:[line 86]<br/>Path continues at Document.java:[line 87]<br/>Path continues at Document.java:[line 88]<br/>Path continues at Document.java:[line 89]<br/>Path continues at Document.java:[line 90]<br/>Path continues at Document.java:[line 91]<br/>Path continues at Document.java:[line 92]<br/>Path continues at Document.java:[line 93]<br/>Path continues at Document.java:[line 97]<br/>Path continues at Document.java:[line 100]<br/>Path continues at Document.java:[line 112]<br/>Remaining obligations: {InputStream x 1}</p>
+                  <br/>In class edu.odu.cs.cs350.pne.Document<br/>In method edu.odu.cs.cs350.pne.Document.readPDFInput(String)<br/>Reference type java.io.InputStream<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at Document.java:[line 73] is not discharged<br/>Path continues at Document.java:[line 75]<br/>Path continues at Document.java:[line 77]<br/>Path continues at Document.java:[line 79]<br/>Path continues at Document.java:[line 82]<br/>Path continues at Document.java:[line 85]<br/>Path continues at Document.java:[line 88]<br/>Path continues at Document.java:[line 89]<br/>Path continues at Document.java:[line 90]<br/>Path continues at Document.java:[line 91]<br/>Path continues at Document.java:[line 92]<br/>Path continues at Document.java:[line 93]<br/>Path continues at Document.java:[line 94]<br/>Path continues at Document.java:[line 95]<br/>Path continues at Document.java:[line 99]<br/>Path continues at Document.java:[line 102]<br/>Path continues at Document.java:[line 114]<br/>Remaining obligations: {InputStream x 1}</p>
             </td>
          </tr>
       </table>
@@ -240,17 +254,17 @@
             <td>
                <span class="priority-1">Dm</span>
             </td>
-            <td>Found reliance on default encoding in edu.odu.cs.cs350.pne.AsciiInput.main(String[]): new java.io.FileReader(String)</td>
+            <td>Found reliance on default encoding in edu.odu.cs.cs350.pne.AsciiInput.ReadTxt(): new java.io.FileReader(String)</td>
          </tr>
          <tr class="detailrow1">
             <td/>
             <td>
                <p id="d1e115" style="display: none;">
                   <a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.pne.AsciiInput<br/>In method edu.odu.cs.cs350.pne.AsciiInput.main(String[])<br/>Called method new java.io.FileReader(String)<br/>At AsciiInput.java:[line 20]</p>
+                  <br/>In class edu.odu.cs.cs350.pne.AsciiInput<br/>In method edu.odu.cs.cs350.pne.AsciiInput.ReadTxt()<br/>Called method new java.io.FileReader(String)<br/>At AsciiInput.java:[line 31]</p>
             </td>
          </tr>
-         <tr class="tablerow0" onclick="toggleRow('d1e144');">
+         <tr class="tablerow0" onclick="toggleRow('d1e142');">
             <td>
                <span class="priority-1">Dm</span>
             </td>
@@ -259,26 +273,26 @@
          <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d1e144" style="display: none;">
+               <p id="d1e142" style="display: none;">
                   <a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.pne.Document<br/>In method edu.odu.cs.cs350.pne.Document.MultiplelistingReport(int)<br/>Called method new java.io.PrintWriter(File)<br/>At Document.java:[line 198]</p>
+                  <br/>In class edu.odu.cs.cs350.pne.Document<br/>In method edu.odu.cs.cs350.pne.Document.MultiplelistingReport(int)<br/>Called method new java.io.PrintWriter(File)<br/>At Document.java:[line 200]</p>
             </td>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d1e159');">
+         <tr class="tablerow1" onclick="toggleRow('d1e157');">
             <td>
                <span class="priority-1">Dm</span>
             </td>
-            <td>Found reliance on default encoding in edu.odu.cs.cs350.pne.Document.readAsciiText(String[]): new java.io.FileReader(String)</td>
+            <td>Found reliance on default encoding in edu.odu.cs.cs350.pne.Document.readAsciiText(String): new java.io.FileReader(File)</td>
          </tr>
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d1e159" style="display: none;">
+               <p id="d1e157" style="display: none;">
                   <a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.pne.Document<br/>In method edu.odu.cs.cs350.pne.Document.readAsciiText(String[])<br/>Called method new java.io.FileReader(String)<br/>At Document.java:[line 218]</p>
+                  <br/>In class edu.odu.cs.cs350.pne.Document<br/>In method edu.odu.cs.cs350.pne.Document.readAsciiText(String)<br/>Called method new java.io.FileReader(File)<br/>At Document.java:[line 220]</p>
             </td>
          </tr>
-         <tr class="tablerow0" onclick="toggleRow('d1e254');">
+         <tr class="tablerow0" onclick="toggleRow('d1e252');">
             <td>
                <span class="priority-1">Dm</span>
             </td>
@@ -287,12 +301,12 @@
          <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d1e254" style="display: none;">
+               <p id="d1e252" style="display: none;">
                   <a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.pne.Librarian<br/>In method edu.odu.cs.cs350.pne.Librarian.main()<br/>Called method new java.io.InputStreamReader(InputStream)<br/>At Librarian.java:[line 28]</p>
             </td>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d1e269');">
+         <tr class="tablerow1" onclick="toggleRow('d1e267');">
             <td>
                <span class="priority-1">Dm</span>
             </td>
@@ -301,9 +315,9 @@
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d1e269" style="display: none;">
+               <p id="d1e267" style="display: none;">
                   <a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.pne.Librarian<br/>In method edu.odu.cs.cs350.pne.Librarian.main()<br/>Called method new java.io.PrintWriter(File)<br/>At Librarian.java:[line 56]</p>
+                  <br/>In class edu.odu.cs.cs350.pne.Librarian<br/>In method edu.odu.cs.cs350.pne.Librarian.main()<br/>Called method new java.io.PrintWriter(File)<br/>At Librarian.java:[line 57]</p>
             </td>
          </tr>
       </table>
@@ -319,68 +333,54 @@
             <td>
                <span class="priority-2">DMI</span>
             </td>
-            <td>Hard coded reference to an absolute pathname in edu.odu.cs.cs350.pne.AsciiInput.main(String[])</td>
+            <td>Hard coded reference to an absolute pathname in edu.odu.cs.cs350.pne.AsciiInput.ReadTxt()</td>
          </tr>
          <tr class="detailrow1">
             <td/>
             <td>
                <p id="d1e101" style="display: none;">
                   <a href="#DMI_HARDCODED_ABSOLUTE_FILENAME">Bug type DMI_HARDCODED_ABSOLUTE_FILENAME (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.pne.AsciiInput<br/>In method edu.odu.cs.cs350.pne.AsciiInput.main(String[])<br/>File name C:\\Users\\alber\\OneDrive\\Desktop\\acmClassifier\\acm-classifier\\acm-classifier\\src\\main\\java\\edu\\odu\\cs\\cs350\\pne\\example.txt<br/>At AsciiInput.java:[line 20]</p>
+                  <br/>In class edu.odu.cs.cs350.pne.AsciiInput<br/>In method edu.odu.cs.cs350.pne.AsciiInput.ReadTxt()<br/>File name C:\\Users\\alber\\OneDrive\\Desktop\\acmClassifier\\acm-classifier\\acm-classifier\\src\\main\\java\\edu\\odu\\cs\\cs350\\pne\\asciinput.txt<br/>At AsciiInput.java:[line 31]</p>
             </td>
          </tr>
-         <tr class="tablerow0" onclick="toggleRow('d1e130');">
-            <td>
-               <span class="priority-2">DMI</span>
-            </td>
-            <td>Hard coded reference to an absolute pathname in edu.odu.cs.cs350.pne.Document.readAsciiText(String[])</td>
-         </tr>
-         <tr class="detailrow0">
-            <td/>
-            <td>
-               <p id="d1e130" style="display: none;">
-                  <a href="#DMI_HARDCODED_ABSOLUTE_FILENAME">Bug type DMI_HARDCODED_ABSOLUTE_FILENAME (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.pne.Document<br/>In method edu.odu.cs.cs350.pne.Document.readAsciiText(String[])<br/>File name C:\\Users\\alber\\OneDrive\\Desktop\\acmClassifier\\acm-classifier\\acm-classifier\\src\\main\\java\\edu\\odu\\cs\\cs350\\pne\\asciinput.txt<br/>At Document.java:[line 218]</p>
-            </td>
-         </tr>
-         <tr class="tablerow1" onclick="toggleRow('d1e240');">
+         <tr class="tablerow0" onclick="toggleRow('d1e238');">
             <td>
                <span class="priority-2">DMI</span>
             </td>
             <td>Hard coded reference to an absolute pathname in edu.odu.cs.cs350.pne.Librarian.main()</td>
          </tr>
-         <tr class="detailrow1">
+         <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d1e240" style="display: none;">
+               <p id="d1e238" style="display: none;">
                   <a href="#DMI_HARDCODED_ABSOLUTE_FILENAME">Bug type DMI_HARDCODED_ABSOLUTE_FILENAME (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.pne.Librarian<br/>In method edu.odu.cs.cs350.pne.Librarian.main()<br/>File name C:/Users/admir/git/acm-classifier/acm-classifier/src/test/data/outFile.txt<br/>At Librarian.java:[line 55]</p>
+                  <br/>In class edu.odu.cs.cs350.pne.Librarian<br/>In method edu.odu.cs.cs350.pne.Librarian.main()<br/>File name C:/Users/admir/git/acm-classifier/acm-classifier/src/test/data/outFile.txt<br/>At Librarian.java:[line 56]</p>
             </td>
          </tr>
-         <tr class="tablerow0" onclick="toggleRow('d1e285');">
+         <tr class="tablerow1" onclick="toggleRow('d1e283');">
             <td>
                <span class="priority-2">NP</span>
             </td>
             <td>Dereference of the result of readLine() without nullcheck in edu.odu.cs.cs350.pne.Librarian.main()</td>
          </tr>
-         <tr class="detailrow0">
+         <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d1e285" style="display: none;">
+               <p id="d1e283" style="display: none;">
                   <a href="#NP_DEREFERENCE_OF_READLINE_VALUE">Bug type NP_DEREFERENCE_OF_READLINE_VALUE (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.pne.Librarian<br/>In method edu.odu.cs.cs350.pne.Librarian.main()<br/>Value loaded from fileLoc<br/>At Librarian.java:[line 34]</p>
             </td>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d1e299');">
+         <tr class="tablerow0" onclick="toggleRow('d1e297');">
             <td>
                <span class="priority-2">SF</span>
             </td>
             <td>Switch statement found in edu.odu.cs.cs350.pne.Scores.setClassification(int) where default case is missing</td>
          </tr>
-         <tr class="detailrow1">
+         <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d1e299" style="display: none;">
+               <p id="d1e297" style="display: none;">
                   <a href="#SF_SWITCH_NO_DEFAULT">Bug type SF_SWITCH_NO_DEFAULT (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.pne.Scores<br/>In method edu.odu.cs.cs350.pne.Scores.setClassification(int)<br/>At Scores.java:[lines 16-50]</p>
             </td>
